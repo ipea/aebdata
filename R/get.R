@@ -159,7 +159,7 @@ get_series <- function(series_id = NULL, series_title = NULL) {
 #'
 #' @return a data.frame or a list
 #'
-#' @examples
+#' @examplesIf aebdata:::test_connection_aeb()
 #' get_series_csv(231)
 #'
 #' @noRd

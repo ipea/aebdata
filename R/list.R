@@ -6,7 +6,7 @@
 #' @return A data.frame
 #' @export
 #'
-#' @examples
+#' @examplesIf aebdata:::test_connection_aeb("temas")
 #' list_themes()
 
 list_themes <- function() {
@@ -39,7 +39,7 @@ list_themes <- function() {
 #' @return A data.frame
 #' @export
 #'
-#' @examples
+#' @examplesIf aebdata:::test_connection_aeb("temas")
 #' list_series()
 #' list_series(theme_id = c(42, 50))
 #' list_series(theme_id = 35, theme_title = c("Organizações do Estado"))
@@ -111,7 +111,7 @@ list_series <- function(theme_id = NULL, theme_title = NULL) {
 #'
 #' @return A data.frame containing serie_title and serie_id.
 #'
-#' @examples
+#' @examplesIf aebdata:::test_connection_aeb()
 #' list_series_id(theme_id = 26)
 #'
 #' @noRd
