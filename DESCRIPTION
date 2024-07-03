@@ -2,7 +2,7 @@ Package: aebdata
 Title: Access Data From the Atlas do Estado Brasileiro
 Version: 0.0.0.9000
 Authors@R: 
-    person("Hugo", "Macedo", , "first.last@example.com", role = c("aut", "cre"))
+    person("Hugo", "Macedo", , "aebdata@hhmace.do", role = c("aut", "cre"))
 Description: This tool facilitates access to the data from the Atlas do Estado
     Brasileiro, maintained by the Instituto de Pesquisa Economica Aplicada
     (Ipea). It allows users to search for specific series, list series or
@@ -11,6 +11,7 @@ License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+Depends: R (>= 4.2.0)
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
