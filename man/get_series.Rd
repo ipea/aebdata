@@ -13,7 +13,7 @@ get_series(series_id = NULL, series_title = NULL)
 A data.frame or a list containing the data from the series
 }
 \description{
-The function download_series is the main function of this package. Its goal
+The function \code{get_series()} is the main function of this package. Its goal
 is to facilitate direct access to the data published in the Atlas do Estado
 Brasileiro so that the user can work with them as they wish.
 }

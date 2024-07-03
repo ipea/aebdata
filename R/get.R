@@ -1,6 +1,6 @@
 #' Get series values
 #'
-#' The function download_series is the main function of this package. Its goal
+#' The function `get_series()` is the main function of this package. Its goal
 #' is to facilitate direct access to the data published in the Atlas do Estado
 #' Brasileiro so that the user can work with them as they wish.
 #'
