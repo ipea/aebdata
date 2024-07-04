@@ -24,7 +24,8 @@ search_series <- function(words, case_insensitive = TRUE, require_all = FALSE) {
 
   # Check if stringi is installed
   if(!requireNamespace("stringi", quietly = TRUE)) {
-    stop("This function needs the instalation of 'stringi' package")
+    stop("This function needs the instalation of 'stringi' package",
+         call. = FALSE)
   }
 
   # List all series available

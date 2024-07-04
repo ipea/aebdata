@@ -56,11 +56,11 @@ list_series <- function(theme_id = NULL, theme_title = NULL) {
     if (length(c(intersect(theme_id, df_themes$theme_id),
                  intersect(theme_title, df_themes$theme_title))) == 0) {
       if (is.null(theme_id) & !is.null(theme_title)) {
-        stop("All theme_title's are missing")
+        stop("All theme_title's are missing", call. = FALSE)
       } else if (!is.null(theme_id) & is.null(theme_title)) {
-        stop("All theme_id's are missing")
+        stop("All theme_id's are missing", call. = FALSE)
       } else if (!is.null(theme_id) & !is.null(theme_title)) {
-        stop("All theme_id's and theme_title's are missing")
+        stop("All theme_id's and theme_title's are missing", call. = FALSE)
       }
     }
 

@@ -23,7 +23,7 @@ get_series <- function(series_id = NULL, series_title = NULL) {
   # Check if both series_id and serie_title are empty
   if (is.null(series_id) & is.null(series_title)) {
 
-    stop("Provide a series_id or a series_title")
+    stop("Provide a series_id or a series_title", call. = FALSE)
 
   } else {
 
@@ -42,11 +42,11 @@ get_series <- function(series_id = NULL, series_title = NULL) {
     if (length(c(intersect(series_id, df_series$series_id),
                  intersect(series_title, df_series$series_title))) == 0) {
       if (is.null(series_id) & !is.null(series_title)) {
-        stop("None of the series_title's exist")
+        stop("None of the series_title's exist", call. = FALSE)
       } else if (!is.null(series_id) & is.null(series_title)) {
-        stop("None of the series_id's exist")
+        stop("None of the series_id's exist", call. = FALSE)
       } else if (!is.null(series_id) & !is.null(series_title)) {
-        stop("None of the series_id's and series_title's exist")
+        stop("None of the series_id's and series_title's exist", call. = FALSE)
       }
     }
 
@@ -86,7 +86,7 @@ get_series <- function(series_id = NULL, series_title = NULL) {
             substr(df_series$series_title, 1, 65)
           )
         )|>
-          stop()
+          stop(call. = FALSE)
 
       } else {
 
@@ -120,7 +120,7 @@ get_series <- function(series_id = NULL, series_title = NULL) {
             collapse = "\n"
           )
         )|>
-          stop()
+          stop(call. = FALSE)
 
       } else {
         # If at least one is not NULL
