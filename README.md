@@ -6,45 +6,25 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of aebdata is to …
+The package aebdata is part of an effort by the [Atlas do Estado
+Brasileiro](https://www.ipea.gov.br/atlasestado/) to facilitate people’s
+access to Brazilian data so that anyone can conduct their analysis. The
+data, available in .csv format within the series, can now be downloaded
+directly from R.
 
 ## Installation
 
-You can install the development version of aebdata from
-[GitHub](https://github.com/) with:
+There are two methods to install the aebdata package from
+[GitHub](https://github.com/):
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("hhmacedo/aebdata")
+# The first is a more verbose and human-readable way, using pak:
+
+# install.packages("pak")
+pak::pkg_install("hhmacedo/aebdata")
+
+# The second is a lighter and more programmatic version:
+
+# install.packages("remotes")
+remotes::install_github("hhmacedo/aebdata")
 ```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-library(aebdata)
-## basic example code
-```
-
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
