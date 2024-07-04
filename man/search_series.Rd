@@ -18,7 +18,8 @@ A data.frame
 }
 \description{
 The \code{search_series()} function provides a quick way to access a list of
-series that may be of interest, along with their respective IDs.
+series that may be of interest, along with their respective IDs. Each series
+appears according to the number of themes it is present in.
 
 If one result should appear before the other, the result can be sorted by
 using the word multiple times in the search, thus giving it greater
