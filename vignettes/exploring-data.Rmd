@@ -1,0 +1,57 @@
+---
+title: "Exploring The Data"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Exploring The Data}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+In this tutorial, we will utilize just our package: aebdata. Let us begin by loading the packages:
+
+```{r setup}
+library(aebdata)
+```
+
+Now, let us assume that you desire to explore some of the series that are currently available. The primary function to be employed in this scenario would be to compile a list of the themes that are accessible.
+
+```{r list-themes, eval = FALSE}
+list_themes()
+```
+```{r list-themes-knit, echo = FALSE}
+list_themes() |>
+  knitr::kable(format = "html")
+```
+
+The two themes to be explored here will be "_Funcionalismo público por cor/raça_" and "_Desigualdades no setor público_". Let's use their respective ids in the series listing:
+
+```{r list-series, eval = FALSE}
+list_series(theme_id = c(41,49))
+```
+```{r list-series-knit, echo = FALSE}
+list_series(theme_id = c(41,49)) |>
+  knitr::kable(format = "html")
+```
+
+Looking at the series list, the two we wish to obtain data for at this moment are "_Remuneração média mensal de vínculos públicos por sexo e cor (2004-2021)_" and "_Total de vínculos públicos por cor e sexo (2004-2021)_". To retrieve the data, we will use the `get_series()` function with the desired ids.
+
+```{r get-series}
+downloaded_series <- get_series(series_id = c(240, 241))
+```
+
+And now the data frame is available:
+
+```{r download-141, eval = FALSE}
+head(downloaded_series$`240`)
+```
+```{r download-141-knit, echo = FALSE}
+head(downloaded_series$`240`) |>
+  knitr::kable(format = "html")
+```
