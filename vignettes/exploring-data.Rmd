@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-In this tutorial, we will utilize just our package: aebdata. Let us begin by loading the packages:
+In this tutorial, we will utilize just our package: aebdata. Let us begin by loading the package:
 
 ```{r setup}
 library(aebdata)
