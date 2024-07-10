@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # aebdata
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/hhmacedo/aebdata/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/hhmacedo/aebdata/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The package aebdata is part of an effort by the [Atlas do Estado Brasileiro](https://www.ipea.gov.br/atlasestado/) to facilitate people's access to Brazilian data so that anyone can conduct their analysis. The data, available in .csv format within the series, can now be downloaded directly from R.

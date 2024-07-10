@@ -4,6 +4,8 @@
 # aebdata
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/hhmacedo/aebdata/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/hhmacedo/aebdata/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The package aebdata is part of an effort by the [Atlas do Estado
