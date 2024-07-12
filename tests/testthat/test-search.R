@@ -1,6 +1,21 @@
-test_that("multiple search works", {
+test_that("search works", {
   skip_if_not_installed("stringi")
-  expect_snapshot(search_series(c("militares", "cargos"), require_all = TRUE))
+  rds <- readRDS(test_path("_data", "search.rds"))
+  expect_equal(search_series("participação"), rds$simple)
+})
+
+test_that("require_all works", {
+  skip_if_not_installed("stringi")
+  rds <- readRDS(test_path("_data", "search.rds"))
+  expect_equal(search_series(c("militares", "cargos"), require_all = TRUE),
+               rds$requireall_true)
+})
+
+test_that("case_insensitive works", {
+  skip_if_not_installed("stringi")
+  rds <- readRDS(test_path("_data", "search.rds"))
+  expect_equal(search_series("CAP ", case_insensitive = FALSE),
+               rds$caseinsensitive_false)
 })
 
 test_that("return empty", {
