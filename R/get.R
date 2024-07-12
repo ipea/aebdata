@@ -194,7 +194,7 @@ get_series_csv <- function(series_id) {
     # Read all files as data.frames
     df_series <- vc_downloads |>
       (\(x) paste0("https://www.ipea.gov.br/atlasestado/", x))() |>
-      sapply(function(link) readr::read_delim(link,
+      lapply(function(link) readr::read_delim(link,
                                               delim = ";",
                                               show_col_types = FALSE)) |>
       lapply(as.data.frame)
