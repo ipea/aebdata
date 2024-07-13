@@ -1,8 +1,9 @@
 Package: aebdata
-Title: Access Data From the Atlas do Estado Brasileiro
+Title: Access Data from the Atlas do Estado Brasileiro
 Version: 0.0.0.9000
 Authors@R: 
-    person("Hugo", "Macedo", , "aebdata@hhmace.do", role = c("aut", "cre"))
+    person("Hugo", "Macedo", , "aebdata@hhmace.do",
+           role = c("aut", "cre", "cph"))
 Description: This tool facilitates access to the data from the Atlas do Estado
     Brasileiro, maintained by the Instituto de Pesquisa Economica Aplicada
     (Ipea). It allows users to search for specific series, list series or

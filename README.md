@@ -16,10 +16,16 @@ directly from R.
 
 ## Installation
 
-There are two methods to install the aebdata package from
-[GitHub](https://github.com/):
+There are three methods to install the aebdata package: one from CRAN
+and two from [GitHub](https://github.com/):
 
 ``` r
+# CRAN
+
+install.packages("aebdata")
+
+# GitHub
+
 # The first is a more verbose and human-readable way, using pak:
 
 # install.packages("pak")
