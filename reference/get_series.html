@@ -74,679 +74,280 @@ data.frame corresponding to a series.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">get_series</span><span class="op">(</span>series_id <span class="op">=</span> <span class="fl">170</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $`9436-20210203executivomunicipaltabelas123`</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                             ,ano,cbo2002,Ocupacao,Vinculos2018,Vinculos2003,Codigo_GG,Grande_Grupo,Diferenca,Variacao</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                                                          1,2018,411010,assistente administrativo,489133,301870,4,Serviços Administrativos,187263,62</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                                                   2,2018,331205,professor de nivel medio no ensino fundamental,436570,287764,3,Técnicos,148806,51.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3                                 3,2018,231210,professor de nivel superior do ensino fundamental (primeira a quarta serie),371577,267904,2,Profissionais,103673,38.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4                                                                        4,2018,111415,dirigente do servico publico municipal,363814,166637,1,Dirigentes,197177,118.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5                  5,2018,231205,professor da  educacao de jovens e adultos do ensino fundamental (primeira a quarta serie),267238,160543,2,Profissionais,106695,66.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6                                       6,2018,514225,trabalhador de servicos de limpeza e conservacao de areas publicas,251726,152528,5,Serviços e Comércio,99198,65</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7                                                                              7,2018,411005,auxiliar de escritorio,228440,227432,4,Serviços Administrativos,1008,0.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8                                                                           8,2018,515105,agente comunitario de saude,210443,63344,5,Serviços e Comércio,147099,232.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9                                                                    9,2018,331105,professor de nivel medio na educacao infantil,190681,54127,3,Técnicos,136554,252.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10                                                                                            10,2018,514320,faxineiro,149426,132734,5,Serviços e Comércio,16692,12.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11                                                                                          11,2018,322205,tecnico de enfermagem,125036,18697,3,Técnicos,106339,568.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12                                                                                                 12,2018,517420,vigia,101458,73201,5,Serviços e Comércio,28257,38.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13                                       13,2018,231105,professor de nivel superior na educacao infantil (quatro a seis anos),97677,19262,2,Profissionais,78415,407.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14                                                                         14,2018,410105,supervisor administrativo,97477,61126,4,Serviços Administrativos,36351,59.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15                                                                             15,2018,331110,auxiliar de desenvolvimento infantil,96236,25945,3,Técnicos,70291,270.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16                                                                                            16,2018,322230,auxiliar de enfermagem,90705,99328,3,Técnicos,-8623,-8.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17                                                                                                  17,2018,223505,enfermeiro,88313,26875,2,Profissionais,61438,228.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18                                                                                       18,2018,513205,cozinheiro geral,85596,63954,5,Serviços e Comércio,21642,33.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19                                                                                               19,2018,225125,medico clinico,83481,64571,2,Profissionais,18910,29.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20                                                                                          20,2018,514215,varredor de rua,83403,81325,5,Serviços e Comércio,2078,2.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21                                                                       21,2018,782305,motorista de carro de passeio,83374,50901,7,Produção e Indústria I,32473,63.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22                                                                                           22,2018,352210,agente de saude publica,82607,53563,3,Técnicos,29044,54.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23                                                                                23,2018,517215,guarda-civil municipal,78956,26609,5,Serviços e Comércio,52347,196.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24                                                         24,2018,232115,professor de disciplinas pedagogicas no ensino medio,75776,45302,2,Profissionais,30474,67.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25                                                                                    25,2018,514120,zelador de edificio,62290,31516,5,Serviços e Comércio,30774,97.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26                                  26,2018,992225,auxiliar geral de conservacao de vias permanentes (exceto trilhos),61168,42543,9,Reparação e Manutenção,18625,43.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27                                                            27,2018,514325,trabalhador da manutencao de edificacoes,54781,104902,5,Serviços e Comércio,-50121,-47.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28                                                                                      28,2018,717020,servente de obras,50728,50624,7,Produção e Indústria I,104,0.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29                                                                             29,2018,334110,inspetor de alunos de escola publica,49524,20646,3,Técnicos,28878,139.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30                                                                                              30,2018,517330,vigilante,48521,34474,5,Serviços e Comércio,14047,40.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31                                                                                           31,2018,251605,assistente social,42080,13807,2,Profissionais,28273,204.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32                                                32,2018,231305,professor de ciencias exatas e naturais do ensino fundamental,40429,23825,2,Profissionais,16604,69.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33                                                              33,2018,782310,motorista de furgao ou veiculo similar,36085,22352,7,Produção e Indústria I,13733,61.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34                                                                           34,2018,223208,cirurgiao dentista - clinico geral,35461,22749,2,Profissionais,12712,55.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35                                            35,2018,782510,motorista de caminhao (rotas regionais e internacionais),30111,19313,7,Produção e Indústria I,10798,55.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36                                                                                            36,2018,123105,diretor administrativo,27735,7338,1,Dirigentes,20397,278</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37                                                                            37,2018,422105,recepcionista, em geral,26714,17265,4,Serviços Administrativos,9449,54.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38                                                                                                     38,2018,239415,pedagogo,25624,5671,2,Profissionais,19953,351.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39                                                                              39,2018,411030,auxiliar de pessoal,25621,12639,4,Serviços Administrativos,12982,102.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40                                                                      40,2018,131310,diretor de instituicao educacional publica,24909,14627,1,Dirigentes,10282,70.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41                                                                               41,2018,332105,professor leigo no ensino fundamental,23908,22626,3,Técnicos,1282,5.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42                                                                                   42,2018,515120,visitador sanitario,22411,10297,5,Serviços e Comércio,12114,117.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43                                                                                  43,2018,252305,secretaria(o) executiva(o),22410,10184,2,Profissionais,12226,120.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44                                                                                       44,2018,239405,coordenador pedagogico,21992,8315,2,Profissionais,13677,164.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45                                                                                           45,2018,715210,pedreiro,21951,25930,7,Produção e Indústria I,-3979,-15.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46                                                                                                         46,2018,371410,recreador,21751,7118,3,Técnicos,14633,205.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 47                                                                                            47,2018,251510,psicologo clinico,21465,6486,2,Profissionais,14979,230.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 48                                                           48,2018,231315,professor de educacao fisica do ensino fundamental,20997,5666,2,Profissionais,15331,270.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 49                                                                                  49,2018,254410,fiscal de tributos municipal,20385,15697,2,Profissionais,4688,29.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 50                                                             50,2018,111410,dirigente do servico publico estadual e distrital,20151,34049,1,Dirigentes,-13898,-40.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 51                                                         51,2018,231335,professor de lingua portuguesa do ensino fundamental,19718,7768,2,Profissionais,11950,153.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 52                                          52,2018,231110,professor de nivel superior na educacao infantil (zero a tres anos),19296,3069,2,Profissionais,16227,528.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 53                                                                                                 53,2018,513425,copeiro,19040,12020,5,Serviços e Comércio,7020,58.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 54                                                                                           54,2018,322415,auxiliar em saude bucal,18419,6780,3,Técnicos,11639,171.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 55                                                                                               55,2018,412205,continuo,18114,17413,4,Serviços Administrativos,701,4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 56                                                                                          56,2018,111220,secretario - executivo,17915,5594,1,Dirigentes,12321,220.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 57                                                                                          57,2018,142105,gerente administrativo,17623,5430,1,Dirigentes,12193,224.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 58                                                                                       58,2018,239410,orientador educacional,17375,6798,2,Profissionais,10577,155.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 59                                                         59,2018,231310,professor de educacao artistica do ensino fundamental,16731,12416,2,Profissionais,4315,34.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 60                                                                                           60,2018,223605,fisioterapeuta geral,16713,3673,2,Profissionais,13040,355</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 61                                                                           61,2018,782410,motorista de onibus urbano,16249,7843,7,Produção e Indústria I,8406,107.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 62                                                                                                   62,2018,223405,farmaceutico,14798,3070,2,Profissionais,11728,382</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 63                                               63,2018,234510,professor de ensino superior na area de orientacao educacional,14672,2147,2,Profissionais,12525,583.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 64                                                                              64,2018,232105,professor de artes no ensino medio,14356,13901,2,Profissionais,455,3.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 65                                                                                     65,2018,517220,agente de transito,14307,3660,5,Serviços e Comércio,10647,290.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 66                                                                                                 66,2018,252105,administrador,14162,5543,2,Profissionais,8619,155.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 67                                                                             67,2018,514205,coletor de lixo domiciliar,13578,14642,5,Serviços e Comércio,-1064,-7.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 68                                                                                                68,2018,223710,nutricionista,13197,2975,2,Profissionais,10222,343.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 69                                                                                                     69,2018,516205,baba,12755,9058,5,Serviços e Comércio,3697,40.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 70                                                                  70,2018,231340,professor de matematica do ensino fundamental,12705,6754,2,Profissionais,5951,88.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 71                                                                                           71,2018,239430,supervisor de ensino,11686,7715,2,Profissionais,3971,51.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 72                                                                                       72,2018,333115,professores de cursos livres,10752,4361,3,Técnicos,6391,146.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 73                                                                               73,2018,515110,atendente de enfermagem,10651,17113,5,Serviços e Comércio,-6462,-37.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 74                                                                                  74,2018,513435,atendente de lanchonete,10571,8669,5,Serviços e Comércio,1902,21.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 75                                                                                            75,2018,223305,medico veterinario,10337,2616,2,Profissionais,7721,295.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 76                                                                                               76,2018,214205,engenheiro civil,10219,6543,2,Profissionais,3676,56.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 77                                                                                           77,2018,412110,digitador,10208,5871,4,Serviços Administrativos,4337,73.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 78                                                                                               78,2018,351505,tecnico em secretariado,10181,9591,3,Técnicos,590,6.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 79                                                                                         79,2018,422205,telefonista,8582,11289,4,Serviços Administrativos,-2707,-24</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 80                                                                                           80,2018,724110,encanador,8265,11178,7,Produção e Indústria I,-2913,-26.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 81                                                                                    81,2018,517410,porteiro de edificios,8116,3369,5,Serviços e Comércio,4747,140.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 82                                                                                      82,2018,517310,agente de seguranca,7991,3295,5,Serviços e Comércio,4696,142.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 83                                                                                            83,2018,351305,tecnico em administracao,7982,8942,3,Técnicos,-960,-10.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 84                                                                            84,2018,111405,dirigente do servico publico federal,7883,10223,1,Dirigentes,-2340,-22.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 85                                                                     85,2018,231325,professor de historia do ensino fundamental,7840,5478,2,Profissionais,2362,43.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 86                                                                                86,2018,324115,tecnico em radiologia e imagenologia,7563,3216,3,Técnicos,4347,135.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 87                                                               87,2018,234505,professor de ensino superior na area de didatica,7403,2811,2,Profissionais,4592,163.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 88                                                                                   88,2018,234624,professor de lingua portuguesa,7339,3020,2,Profissionais,4319,143</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 89                                                         89,2018,234520,professor de ensino superior na area de pratica de ensino,7184,927,2,Profissionais,6257,675</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 90                                                                                        90,2018,241225,procurador do municipio,7184,2212,2,Profissionais,4972,224.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 91                                                       91,2018,233225,professor instrutor de ensino e aprendizagem em servicos,6990,1554,2,Profissionais,5436,349.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 92                                                                                            92,2018,352310,agente fiscal de qualidade,6844,5926,3,Técnicos,918,15.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 93                                                                                                          93,2018,241005,advogado,6684,3411,2,Profissionais,3273,96</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 94                                                                                                  94,2018,225124,medico pediatra,6393,5587,2,Profissionais,806,14.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 95                                                                                               95,2018,371105,auxiliar de biblioteca,6334,4240,3,Técnicos,2094,49.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 96                                                                                                       96,2018,252210,contador,6324,2618,2,Profissionais,3706,141.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 97                                                                                            97,2018,223810,fonoaudiologo geral,6247,2546,2,Profissionais,3701,145.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 98                                                             98,2018,331305,professor de nivel medio no ensino profissionalizante,6118,13164,3,Técnicos,-7046,-53.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 99                                                                   99,2018,231320,professor de geografia do ensino fundamental,5790,2149,2,Profissionais,3641,169.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 100                                                                                              100,2018,251530,psicologo social,5787,961,2,Profissionais,4826,502.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 101                                                                                         101,2018,352205,agente de defesa ambiental,5776,3782,3,Técnicos,1994,52.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 102                                                                    102,2018,515210,auxiliar de farmacia de manipulacao,5654,396,5,Serviços e Comércio,5258,1327.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 103                                                                                      103,2018,622010,jardineiro,5504,6254,6,Agropec., Florestais e Pesca,-750,-12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 104                                                   104,2018,715125,operador de maquinas de construcao civil e mineracao,5435,5036,7,Produção e Indústria I,399,7.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 105                                                                                105,2018,254310,agente de higiene e seguranca,5292,1234,2,Profissionais,4058,328.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 106                                                                                            106,2018,322405,tecnico em saude bucal,5242,2036,3,Técnicos,3206,157.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 107                                                                                          107,2018,261110,assessor de imprensa,5174,798,2,Profissionais,4376,548.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 108                                                                            108,2018,715130,operador de motoniveladora,5111,4421,7,Produção e Indústria I,690,15.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 109                                                    109,2018,224125,tecnico de desporto individual e coletivo (exceto futebol),5018,2797,2,Profissionais,2221,79.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 110                                                                                     110,2018,516210,cuidador de idosos,4997,166,5,Serviços e Comércio,4831,2910.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 111                                                                          111,2018,413110,auxiliar de contabilidade,4945,5058,4,Serviços Administrativos,-113,-2.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 112                                                                      112,2018,782405,motorista de onibus rodoviario,4925,2005,7,Produção e Indústria I,2920,145.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 113                                                                                                      113,2018,221105,biologo,4687,2137,2,Profissionais,2550,119.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 114                                   114,2018,862205,operador de estacao de captacao, tratamento e distribuicao de agua,4537,4095,8,Produção e Indústria II,442,10.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 115                                                                            115,2018,223272,cirurgiao dentista de saude coletiva,4480,4280,2,Profissionais,200,4.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 116                                                     116,2018,422110,recepcionista de consultorio medico ou dentario,4453,3472,4,Serviços Administrativos,981,28.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 117                                                                                117,2018,225250,medico ginecologista e obstetra,4279,3381,2,Profissionais,898,26.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 118                                                                                          118,2018,351105,tecnico de contabilidade,4210,4792,3,Técnicos,-582,-12.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 119                                                                              119,2018,715615,eletricista de instalacoes,4196,4281,7,Produção e Indústria I,-85,-2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 120                                                                               120,2018,715115,operador de escavadeira,4140,3231,7,Produção e Indústria I,909,28.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 121                                                                                        121,2018,225225,medico cirurgiao geral,4093,4421,2,Profissionais,-328,-7.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 122                                                                                               122,2018,516215,mae social,4088,1105,5,Serviços e Comércio,2983,270</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 123                                                                                        123,2018,333110,instrutor de cursos livres,4087,1407,3,Técnicos,2680,190.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 124                                                                                 124,2018,225130,medico de familia e comunidade,3982,1412,2,Profissionais,2570,182</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 125                                                                125,2018,841408,cozinhador (conservacao de alimentos),3961,2976,8,Produção e Indústria II,985,33.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 126                                                                                               126,2018,516610,sepultador,3943,3001,5,Serviços e Comércio,942,31.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 127                                                                          127,2018,517415,porteiro de locais de diversao,3938,2148,5,Serviços e Comércio,1790,83.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 128                                128,2018,914405,mecanico de manutencao de automoveis, motocicletas e veiculos similares,3923,3571,9,Reparação e Manutenção,352,9.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 129                                                                          129,2018,710205,mestre (construcao civil),3908,6956,7,Produção e Indústria I,-3048,-43.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 130                                                                    130,2018,239220,professor de alunos com deficiencia multipla,3863,503,2,Profissionais,3360,668</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 131                                                                            131,2018,641015,tratorista agricola,3833,2713,6,Agropec., Florestais e Pesca,1120,41.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132                                                                                       132,2018,324205,tecnico em patologia clinica,3767,2224,3,Técnicos,1543,69.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 133                                                                                    133,2018,234810,professor de administracao,3591,2580,2,Profissionais,1011,39.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 134                                                                                            134,2018,312105,tecnico de obras civis,3547,4454,3,Técnicos,-907,-20.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 135                                                                                          135,2018,414105,almoxarife,3478,3515,4,Serviços Administrativos,-37,-1.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 136                                                                                           136,2018,241040,consultor juridico,3451,1505,2,Profissionais,1946,129.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 137                                                                                     137,2018,131205,diretor de servicos de saude,3415,1845,1,Dirigentes,1570,85.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 138                                                                             138,2018,123110,diretor administrativo e financeiro,3402,1019,1,Dirigentes,2383,233.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 139                                                                                    139,2018,131210,gerente de servicos de saude,3382,1499,1,Dirigentes,1883,125.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 140                                                           140,2018,951105,eletricista de manutencao eletroeletronica,3369,2328,9,Reparação e Manutenção,1041,44.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 141                                                            141,2018,233210,instrutor de aprendizagem e treinamento industrial,3261,2125,2,Profissionais,1136,53.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 142                                                           142,2018,515215,auxiliar de laboratorio de analises clinicas,3250,4150,5,Serviços e Comércio,-900,-21.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 143                                                                                       143,2018,716610,pintor de obras,3249,2694,7,Produção e Indústria I,555,20.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 144                                                                                        144,2018,251505,psicologo educacional,3211,1027,2,Profissionais,2184,212.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 145                                                                                            145,2018,848505,abatedor,3211,492,8,Produção e Indústria II,2719,552.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 146                                                                          146,2018,232140,professor de historia no ensino medio,3207,2857,2,Profissionais,350,12.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 147                                                 147,2018,232145,professor de lingua e literatura brasileira no ensino medio,3160,6341,2,Profissionais,-3181,-50.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 148                                                                                 148,2018,252205,auditor (contadores e afins),3149,1397,2,Profissionais,1752,125.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 149                                                                                       149,2018,214105,arquiteto de edificacoes,3146,2430,2,Profissionais,716,29.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 150                                                                                                   150,2018,321105,tecnico agricola,3137,2098,3,Técnicos,1039,49.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 151                                                                    151,2018,232120,professor de educacao fisica no ensino medio,3114,970,2,Profissionais,2144,221</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 152                                                                         152,2018,232135,professor de geografia no ensino medio,3043,2424,2,Profissionais,619,25.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 153                                                             153,2018,131305,diretor de instituicao educacional da area privada,3034,4413,1,Dirigentes,-1379,-31.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 154                                                          154,2018,511205,fiscal de transportes coletivos (exceto trem),2960,3342,5,Serviços e Comércio,-382,-11.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 155                                                                                        155,2018,715505,carpinteiro,2960,4202,7,Produção e Indústria I,-1242,-29.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 156                                               156,2018,862305,operador de estacao de tratamento de agua e efluentes,2931,1925,8,Produção e Indústria II,1006,52.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 157                                            157,2018,121010,diretor geral de empresa e organizacoes (exceto de interesse publico),2909,5018,1,Dirigentes,-2109,-42</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 158                                                                                              158,2018,312210,tecnico de saneamento,2878,760,3,Técnicos,2118,278.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 159                                                                           159,2018,715135,operador de pa carregadeira,2846,2244,7,Produção e Indústria I,602,26.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 160                                                                                        160,2018,223905,terapeuta ocupacional,2807,1166,2,Profissionais,1641,140.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 161                                                                 161,2018,131320,gerente de servicos educacionais da area publica,2797,933,1,Dirigentes,1864,199.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 162                                                                  162,2018,317205,operador de computador (inclusive microcomputador),2703,1872,3,Técnicos,831,44.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 163                 163,2018,992205,encarregado geral de operacoes de conservacao de vias permanentes (exceto trilhos),2636,4152,9,Reparação e Manutenção,-1516,-36.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 164                                                                                              164,2018,225170,medico generalista,2612,865,2,Profissionais,1747,202</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 165                                                            165,2018,621005,trabalhador agropecuario em geral,2569,3896,6,Agropec., Florestais e Pesca,-1327,-34.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 166                                                                                  166,2018,516345,auxiliar de lavanderia,2539,441,5,Serviços e Comércio,2098,475.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 167                                                                                            167,2018,517115,salva-vidas,2539,1088,5,Serviços e Comércio,1451,133.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 168                                                                      168,2018,332205,professor pratico no ensino profissionalizante,2474,2005,3,Técnicos,469,23.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 169                                                                               169,2018,121005,diretor de planejamento estrategico,2424,1512,1,Dirigentes,912,60.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 170                                                                                      170,2018,131120,gerente de servicos sociais,2387,505,1,Dirigentes,1882,372.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 171                                                                          171,2018,232110,professor de biologia no ensino medio,2364,1968,2,Profissionais,396,20.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 172                                                                                   172,2018,234616,professor de lingua inglesa,2361,567,2,Profissionais,1794,316.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 173                                                                    173,2018,239210,professor de alunos com deficiencia fisica,2351,549,2,Profissionais,1802,328.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 174                                                                                               174,2018,519940,leiturista,2345,2605,5,Serviços e Comércio,-260,-10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 175                                                                                   175,2018,351110,chefe de contabilidade (tecnico),2304,2496,3,Técnicos,-192,-7.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 176                                                   176,2018,231330,professor de lingua estrangeira moderna do ensino fundamental,2284,882,2,Profissionais,1402,159</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 177                                                                      177,2018,521130,atendente de farmacia - balconista,2267,491,5,Serviços e Comércio,1776,361.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 178                                                                    178,2018,122305,diretor de operacoes de obras publica e civil,2253,393,1,Dirigentes,1860,473.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 179                                                                          179,2018,415105,arquivista de documentos,2058,2694,4,Serviços Administrativos,-636,-23.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 180                                                                        180,2018,232155,professor de matematica no ensino medio,2021,1453,2,Profissionais,568,39.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 181                                                                                          181,2018,715205,calceteiro,2017,2971,7,Produção e Indústria I,-954,-32.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 182                                           182,2018,782505,caminhoneiro autonomo (rotas regionais e internacionais),2006,3497,7,Produção e Indústria I,-1491,-42.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 183                                                      183,2018,411045,auxiliar de servicos de importacao e exportacao,1991,1886,4,Serviços Administrativos,105,5.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 184                                                                                  184,2018,254420,tecnico de tributos municipal,1929,1210,2,Profissionais,719,59.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 185                                                                                            185,2018,222110,engenheiro agronomo,1923,1293,2,Profissionais,630,48.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 186                                                          186,2018,232150,professor de lingua estrangeira moderna no ensino medio,1895,1135,2,Profissionais,760,67</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 187                                                                        187,2018,715145,operador de trator de lamina,1890,2253,7,Produção e Indústria I,-363,-16.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 188                                                                                        188,2018,223560,enfermeiro sanitarista,1850,628,2,Profissionais,1222,194.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 189                                                                           189,2018,225270,medico ortopedista e traumatologista,1850,905,2,Profissionais,945,104.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 190                                                                                             190,2018,225133,medico psiquiatra,1842,810,2,Profissionais,1032,127.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 191                                                                                 191,2018,325110,tecnico em laboratorio de farmacia,1840,418,3,Técnicos,1422,340.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 192                                                                       192,2018,239215,professor de alunos com deficiencia mental,1829,843,2,Profissionais,986,117</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 193                                                                                193,2018,223415,farmaceutico analista clinico,1793,2687,2,Profissionais,-894,-33.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 194                                                                     194,2018,142705,gerente de projetos e servicos de manutencao,1775,511,1,Dirigentes,1264,247.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 195                                                                                 195,2018,233110,professor de desenho tecnico,1775,2755,2,Profissionais,-980,-35.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 196                                                              196,2018,313220,tecnico em manutencao de equipamentos de informatica,1774,107,3,Técnicos,1667,1557.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 197                                                                               197,2018,510310,supervisor de vigilantes,1739,2036,5,Serviços e Comércio,-297,-14.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 198                                                                                          198,2018,131110,diretor de servicos sociais,1718,881,1,Dirigentes,837,95</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 199                                                                                199,2018,111225,membro superior do poder executivo,1657,1322,1,Dirigentes,335,25.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 200                                                                                   200,2018,351605,tecnico em seguranca do trabalho,1654,511,3,Técnicos,1143,223.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 201                                                                    201,2018,715120,operador de maquina de abrir valas,1651,1119,7,Produção e Indústria I,532,47.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 202                                                                                                      202,2018,311105,tecnico quimico,1597,951,3,Técnicos,646,67.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 203                                                                                                  203,2018,261205,bibliotecario,1594,1446,2,Profissionais,148,10.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 204                                                          204,2018,239205,professor de alunos com deficiencia auditiva e surdos,1552,1011,2,Profissionais,541,53.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 205                                                                                       205,2018,322420,auxiliar de protese dentaria,1541,522,3,Técnicos,1019,195.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 206                                                   206,2018,234515,professor de ensino superior na area de pesquisa educacional,1525,1752,2,Profissionais,-227,-13</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 207                                     207,2018,641010,operador de maquinas de beneficiamento de produtos agricolas,1517,900,6,Agropec., Florestais e Pesca,617,68.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 208                                                                                   208,2018,254405,fiscal de tributos estadual,1493,4035,2,Profissionais,-2542,-63</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 209                                                                         209,2018,422215,monitor de teleatendimento,1484,331,4,Serviços Administrativos,1153,348.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 210                                                                               210,2018,262710,musico interprete instrumentista,1476,734,2,Profissionais,742,101.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 211                                                                                    211,2018,251225,economista do setor publico,1468,518,2,Profissionais,950,183.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 212                                                                                                212,2018,239425,psicopedagogo,1456,111,2,Profissionais,1345,1211.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 213                                                                                                 213,2018,311710,colorista textil,1433,5579,3,Técnicos,-4146,-74.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 214                                                                 214,2018,862150,operador de maquinas fixas, em geral,1429,1154,8,Produção e Indústria II,275,23.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 215                                                                                    215,2018,322215,tecnico de enfermagem do trabalho,1424,762,3,Técnicos,662,86.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 216                                                         216,2018,911305,mecanico de manutencao de maquinas, em geral,1419,3303,9,Reparação e Manutenção,-1884,-57</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 217                                                                                  217,2018,252405,analista de recursos humanos,1350,284,2,Profissionais,1066,375.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 218                                                                                      218,2018,131115,gerente de servicos culturais,1346,915,1,Dirigentes,431,47.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 219                                                                                    219,2018,142210,gerente de departamento pessoal,1323,820,1,Dirigentes,503,61.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 220                                                                                     220,2018,519910,controlador de pragas,1315,853,5,Serviços e Comércio,462,54.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 221                                                                        221,2018,212405,analista de desenvolvimento de sistemas,1279,638,2,Profissionais,641,100.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 222                                                                                      222,2018,131105,diretor de servicos culturais,1274,725,1,Dirigentes,549,75.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 223                                                                                               223,2018,262615,musico regente,1264,1645,2,Profissionais,-381,-23.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 224                                                              224,2018,317210,tecnico de apoio ao usuario de informatica (helpdesk),1250,173,3,Técnicos,1077,622.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 225                                                                 225,2018,862140,operador de estacao de bombeamento,1220,1519,8,Produção e Indústria II,-299,-19.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 226                                                                       226,2018,223232,cirurgiao dentista - odontologista legal,1218,261,2,Profissionais,957,366.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 227                                                               227,2018,234410,professor de educacao fisica no ensino superior,1169,157,2,Profissionais,1012,644.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 228                                                                                              228,2018,214125,arquiteto urbanista,1161,377,2,Profissionais,784,208</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 229                                                                                         229,2018,225151,medico anestesiologista,1156,807,2,Profissionais,349,43.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 230                                                                        230,2018,322210,tecnico de enfermagem de terapia intensiva,1150,1482,3,Técnicos,-332,-22.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 231                                                                     231,2018,991305,funileiro de veiculos (reparacao),1126,131,9,Reparação e Manutenção,995,759.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 232                                                                                         232,2018,414110,armazenista,1122,464,4,Serviços Administrativos,658,141.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 233                            233,2018,992210,encarregado de equipe de conservacao de vias permanentes (exceto trilhos),1113,1219,9,Reparação e Manutenção,-106,-8.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 234                                                                                                234,2018,325205,tecnico de alimentos,1107,282,3,Técnicos,825,292.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 235                                                                                            235,2018,225120,medico cardiologista,1085,578,2,Profissionais,507,87.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 236                                                                    236,2018,782120,operador de maquina rodoferroviaria,1076,808,7,Produção e Indústria I,268,33.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 237                                                                                               237,2018,224120,preparador fisico,1074,633,2,Profissionais,441,69.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 238                                                                                238,2018,334105,inspetor de alunos de escola privada,1070,516,3,Técnicos,554,107.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 239                                                                                       239,2018,142205,gerente de recursos humanos,1060,359,1,Dirigentes,701,195.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 240                                                                                                   240,2018,321110,tecnico agropecuario,1043,636,3,Técnicos,407,64</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 241                                                                         241,2018,123410,diretor de suprimentos no servico publico,1042,157,1,Dirigentes,885,563.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 242                                                                                                           242,2018,312320,topografo,1018,1241,3,Técnicos,-223,-18</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 243                                                                                    243,2018,513220,cozinheiro de hospital,1016,885,5,Serviços e Comércio,131,14.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 244                                                                                244,2018,317110,programador de sistemas de informacao,1012,756,3,Técnicos,256,33.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 245            245,2018,919205,mecanico de manutencao de maquinas cortadoras de grama, rocadeiras, motosserras e similares,1011,871,9,Reparação e Manutenção,140,16.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 246                                                                                                   246,2018,513405,garcom,1010,1713,5,Serviços e Comércio,-703,-41</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 247                                                                                              247,2018,848520,magarefe,982,1020,8,Produção e Indústria II,-38,-3.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 248                                                                                           248,2018,234435,professor de medicina,981,478,2,Profissionais,503,105.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 249                                                                                             249,2018,142310,gerente de comunicacao,978,110,1,Dirigentes,868,789.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 250                                                                        250,2018,721210,operador de maquinas operatrizes,967,726,7,Produção e Indústria I,241,33.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 251                                                                                     251,2018,322235,auxiliar de enfermagem do trabalho,965,971,3,Técnicos,-6,-0.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 252                                                                                             252,2018,517110,bombeiro civil,959,766,5,Serviços e Comércio,193,25.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 253                                                                                253,2018,711210,operador de carregadeira,959,659,7,Produção e Indústria I,300,45.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 254                                                       254,2018,424105,entrevistador censitario e de pesquisas amostrais,954,672,4,Serviços Administrativos,282,42</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 255                                                                                       255,2018,241020,advogado (direito publico),938,494,2,Profissionais,444,89.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 256                                                                                       256,2018,412105,datilografo,928,3243,4,Serviços Administrativos,-2315,-71.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 257                                                                         257,2018,423105,despachante documentalista,913,1294,4,Serviços Administrativos,-381,-29.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 258                                                                                            258,2018,225139,medico sanitarista,907,1263,2,Profissionais,-356,-28.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 259                                                                                 259,2018,311505,tecnico de controle de meio ambiente,893,224,3,Técnicos,669,298.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 260                                                                                         260,2018,123205,diretor de recursos humanos,888,523,1,Dirigentes,365,69.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 261                                                                                  261,2018,724115,instalador de tubulacoes,882,811,7,Produção e Indústria I,71,8.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 262                                                                                      262,2018,514315,limpador de fachadas,879,1220,5,Serviços e Comércio,-341,-28</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 263                                                                                263,2018,410235,supervisor de tesouraria,875,836,4,Serviços Administrativos,39,4.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 264                                                                                 264,2018,413205,atendente de agencia,875,335,4,Serviços Administrativos,540,161.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 265                                                                                                265,2018,224105,avaliador fisico,863,146,2,Profissionais,717,491.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 266                                                                                                  266,2018,123115,diretor financeiro,849,533,1,Dirigentes,316,59.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 267                                                                                                   267,2018,353230,tesoureiro de banco,845,462,3,Técnicos,383,82.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 268                                                                    268,2018,784205,alimentador de linha de producao,805,1904,7,Produção e Indústria I,-1099,-57.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 269                                               269,2018,914425,mecanico de veiculos automotores a diesel (exceto tratores),802,754,9,Reparação e Manutenção,48,6.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 270                                  270,2018,114405,dirigente e administrador de organizacao da sociedade civil sem fins lucrativos,801,1754,1,Dirigentes,-953,-54.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 271                                                      271,2018,342305,chefe de servico de transporte rodoviario (passageiros e cargas),797,864,3,Técnicos,-67,-7.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 272                                                                                   272,2018,783225,ajudante de motorista,786,432,7,Produção e Indústria I,354,81.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 273                                                                                      273,2018,351430,auxiliar de servicos juridicos,782,951,3,Técnicos,-169,-17.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 274                                                                                                274,2018,225140,medico do trabalho,770,277,2,Profissionais,493,178</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 275                                                                                              275,2018,519110,motofretista,757,339,5,Serviços e Comércio,418,123.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 276                                                                        276,2018,782515,motorista operacional de guincho,752,492,7,Produção e Indústria I,260,52.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 277                                                                          277,2018,420125,supervisor de recepcionistas,747,637,4,Serviços Administrativos,110,17.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 278                                                                                                   278,2018,354805,tecnico em turismo,740,260,3,Técnicos,480,184.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 279                                                                    279,2018,410220,supervisor de controle patrimonial,737,374,4,Serviços Administrativos,363,97.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 280                                                                                                280,2018,724315,soldador,735,760,7,Produção e Indústria I,-25,-3.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 281                                                                                            281,2018,771105,marceneiro,734,993,7,Produção e Indústria I,-259,-26.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 282                                                                                        282,2018,516305,lavadeiro, em geral,732,538,5,Serviços e Comércio,194,36.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 283                                                                          283,2018,325105,auxiliar tecnico em laboratorio de farmacia,726,124,3,Técnicos,602,485.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 284                                                                                                      284,2018,261305,arquivista,723,238,2,Profissionais,485,203.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 285                                                                                           285,2018,992115,borracheiro,721,847,9,Reparação e Manutenção,-126,-14.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 286                                                                                286,2018,717005,demolidor de edificacoes,719,733,7,Produção e Indústria I,-14,-1.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 287                                                                                                  287,2018,312205,tecnico de estradas,716,239,3,Técnicos,477,199.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 288                                  288,2018,715140,operador de pavimentadora (asfalto, concreto e materiais similares),716,1061,7,Produção e Indústria I,-345,-32.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 289                                                                               289,2018,715230,pedreiro de edificacoes,711,860,7,Produção e Indústria I,-149,-17.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 290                                                                                              290,2018,123805,diretor de manutencao,705,290,1,Dirigentes,415,143.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 291                                                                                                  291,2018,262610,musico arranjador,705,685,2,Profissionais,20,2.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 292                                                                              292,2018,411015,atendente de judiciario,701,336,4,Serviços Administrativos,365,108.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 293                                                           293,2018,721215,operador de maquinas-ferramenta convencionais,700,492,7,Produção e Indústria I,208,42.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 294                                                294,2018,141305,gerente de producao e operacoes da construcao civil e obras publicas,694,501,1,Dirigentes,193,38.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 295                                                                               295,2018,223212,cirurgiao dentista - endodontista,676,160,2,Profissionais,516,322.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 296                                                                        296,2018,234745,professor de historia do ensino superior,674,120,2,Profissionais,554,461.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 297                                                           297,2018,234105,professor de matematica aplicada (no ensino superior),668,299,2,Profissionais,369,123.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 298                                                                              298,2018,233105,professor da area de meio ambiente,665,152,2,Profissionais,513,337.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 299                                                                                   299,2018,322605,tecnico de imobilizacao ortopedica,657,132,3,Técnicos,525,397.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 300                                                                                           300,2018,516505,agente funerario,649,461,5,Serviços e Comércio,188,40.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 301                                                                301,2018,233215,instrutor de aprendizagem e treinamento comercial,645,428,2,Profissionais,217,50.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 302                                                              302,2018,234405,professor de ciencias biologicas do ensino superior,639,335,2,Profissionais,304,90.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 303                                                                                  303,2018,510105,supervisor de transportes,637,355,5,Serviços e Comércio,282,79.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 304                                                                                                       304,2018,261125,jornalista,620,396,2,Profissionais,224,56.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 305                                                                                     305,2018,632605,carvoeiro,616,3611,6,Agropec., Florestais e Pesca,-2995,-82.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 306                                                                           306,2018,424125,escriturario  em  estatistica,615,492,4,Serviços Administrativos,123,25</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 307                                                         307,2018,511210,despachante de transportes coletivos (exceto trem),609,492,5,Serviços e Comércio,117,23.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 308                               308,2018,991115,operador de maquinas especiais em conservacao de via permanente (trilhos),609,467,9,Reparação e Manutenção,142,30.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 309                                                                               309,2018,413225,escriturario de banco,605,707,4,Serviços Administrativos,-102,-14.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 310                                                                                                    310,2018,318005,desenhista tecnico,598,808,3,Técnicos,-210,-26</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 311                                                                                      311,2018,519935,lavador de veiculos,598,717,5,Serviços e Comércio,-119,-16.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 312                                                                                           312,2018,514305,limpador de vidros,596,634,5,Serviços e Comércio,-38,-6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 313                                                                                                  313,2018,142405,gerente de compras,588,320,1,Dirigentes,268,83.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 314                                                                    314,2018,225320,medico em radiologia e diagnostico por imagem,586,418,2,Profissionais,168,40.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 315                                                                                           315,2018,517405,porteiro (hotel),583,857,5,Serviços e Comércio,-274,-32</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 316                                                                                           316,2018,371405,recreador de acantonamento,580,178,3,Técnicos,402,225.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 317                                                                                                 317,2018,351425,oficial de justica,578,1139,3,Técnicos,-561,-49.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 318                                                                  318,2018,715610,eletricista de instalacoes (edificios),578,417,7,Produção e Indústria I,161,38.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 319                                                                                                  319,2018,313130,tecnico eletricista,568,167,3,Técnicos,401,240.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 320                                                                         320,2018,410205,supervisor de almoxarifado,567,1183,4,Serviços Administrativos,-616,-52.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 321                                                                                              321,2018,848305,padeiro,556,657,8,Produção e Indústria II,-101,-15.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 322                                          322,2018,992220,pedreiro de conservacao de vias permanentes (exceto trilhos),549,671,9,Reparação e Manutenção,-122,-18.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 323                                                                                323,2018,224135,treinador profissional de futebol,540,424,2,Profissionais,116,27.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 324                                                                                      324,2018,225150,medico em medicina intensiva,540,144,2,Profissionais,396,275</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 325                                                                                            325,2018,225265,medico oftalmologista,532,389,2,Profissionais,143,36.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 326                                                                               326,2018,623020,tratador de animais,530,295,6,Agropec., Florestais e Pesca,235,79.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 327                                                                                           327,2018,225115,medico angiologista,526,1416,2,Profissionais,-890,-62.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 328                                                                       328,2018,342105,analista de transporte em comercio exterior,526,1907,3,Técnicos,-1381,-72.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 329                                                                                               329,2018,225112,medico neurologista,511,443,2,Profissionais,68,15.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 330                                                              330,2018,622020,trabalhador volante da agricultura,501,661,6,Agropec., Florestais e Pesca,-160,-24.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 331                                                                          331,2018,234915,professor de musica no ensino superior,492,104,2,Profissionais,388,373.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 332                                                                                        332,2018,783105,agente de patio,491,119,7,Produção e Indústria I,372,312.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 333           333,2018,860110,supervisor de operacao de fluidos (distribuicao, captacao, tratamento de agua, gases, vapor),486,335,8,Produção e Indústria II,151,45.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 334                                          334,2018,723310,pintor a pincel e rolo (exceto obras e estruturas metalicas),481,605,7,Produção e Indústria I,-124,-20.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 335                                                                                            335,2018,225135,medico dermatologista,478,272,2,Profissionais,206,75.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 336                                                       336,2018,914305,mecanico de manutencao de veiculos ferroviarios,478,726,9,Reparação e Manutenção,-248,-34.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 337                                                                                          337,2018,252310,secretario  bilingue,472,1024,2,Profissionais,-552,-53.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 338                                                                                        338,2018,725010,ajustador mecanico,470,343,7,Produção e Indústria I,127,37</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 339                                                                                              339,2018,391205,inspetor de qualidade,462,1414,3,Técnicos,-952,-67.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 340                                                                                            340,2018,514105,ascensorista,461,1165,5,Serviços e Comércio,-704,-60.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 341                                                                                                      341,2018,251205,economista,455,522,2,Profissionais,-67,-12.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 342                                                                                                          342,2018,213205,quimico,452,264,2,Profissionais,188,71.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 343                                         343,2018,301110,tecnico de laboratorio de analises fisico-quimicas (materiais de construcao),450,139,3,Técnicos,311,223.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 344                                                                                            344,2018,222120,engenheiro florestal,449,117,2,Profissionais,332,283.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 345                                                                                    345,2018,351315,agente de recrutamento e selecao,447,707,3,Técnicos,-260,-36.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 346                                                                         346,2018,234730,professor de direito do ensino superior,442,517,2,Profissionais,-75,-14.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 347                                                        347,2018,233220,professor instrutor de ensino e aprendizagem agroflorestal,441,368,2,Profissionais,73,19.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 348                                                                                                     348,2018,314110,tecnico mecanico,441,502,3,Técnicos,-61,-12.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 349                                                                                349,2018,322240,auxiliar de saude (navegacao maritima),441,258,3,Técnicos,183,70.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 350                                                                                                           350,2018,351405,escrevente,439,532,3,Técnicos,-93,-17.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 351                                                                                                            351,2018,376205,acrobata,435,704,3,Técnicos,-269,-38.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 352                                                                                           352,2018,513430,copeiro de hospital,434,427,5,Serviços e Comércio,7,1.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 353                                                353,2018,342310,inspetor de servicos de transportes rodoviarios (passageiros e cargas),430,262,3,Técnicos,168,64.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 354                                                                            354,2018,414205,apontador de mao-de-obra,428,852,4,Serviços Administrativos,-424,-49.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 355                                                                                     355,2018,313205,tecnico de manutencao eletronica,427,153,3,Técnicos,274,179.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 356                                                                              356,2018,410230,supervisor de orcamento,427,109,4,Serviços Administrativos,318,291.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 357                                                                                   357,2018,254415,tecnico de tributos estadual,426,905,2,Profissionais,-479,-52.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 358                                                                                    358,2018,225275,medico otorrinolaringologista,425,285,2,Profissionais,140,49.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 359                                                                                 359,2018,411020,auxiliar de judiciario,420,201,4,Serviços Administrativos,219,109</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 360                                                                                             360,2018,519905,cartazeiro,420,1465,5,Serviços e Comércio,-1045,-71.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 361                                                                                           361,2018,223545,enfermeiro obstetrico,411,159,2,Profissionais,252,158.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 362                                                                       362,2018,234740,professor de geografia do ensino superior,410,106,2,Profissionais,304,286.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 363                                                                                      363,2018,513215,cozinheiro industrial,394,259,5,Serviços e Comércio,135,52.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 364                                                                             364,2018,411035,auxiliar de estatistica,390,668,4,Serviços Administrativos,-278,-41.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 365                                                                                               365,2018,261115,diretor de redacao,388,261,2,Profissionais,127,48.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 366                                                                           366,2018,515225,auxiliar de producao farmaceutica,386,388,5,Serviços e Comércio,-2,-0.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 367                                                                          367,2018,232130,professor de fisica no ensino medio,382,3240,2,Profissionais,-2858,-88.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 368                                                            368,2018,782705,marinheiro de conves (maritimo e fluviario),382,128,7,Produção e Indústria I,254,198.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 369                                                                                 369,2018,123605,diretor de servicos de informatica,379,134,1,Dirigentes,245,182.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 370                                                                                               370,2018,225285,medico urologista,379,160,2,Profissionais,219,136.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 371                                                                                                              371,2018,354205,comprador,379,326,3,Técnicos,53,16.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 372                                                                                          372,2018,234310,professor de engenharia,377,225,2,Profissionais,152,67.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 373                                                                                      373,2018,214260,engenheiro civil (saneamento),372,342,2,Profissionais,30,8.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 374 374,2018,953115,eletricista de instalacoes (veiculos automotores e maquinas operatrizes, exceto aeronaves e embarcacoes),370,371,9,Reparação e Manutenção,-1,-0.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 375                                                                                    375,2018,519925,guardador de veiculos,364,963,5,Serviços e Comércio,-599,-62.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 376                                                                                         376,2018,311110,tecnico de celulose e papel,363,880,3,Técnicos,-517,-58.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 377                                                                             377,2018,318510,desenhista projetista de construcao civil,363,241,3,Técnicos,122,50.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 378                                                                                                         378,2018,341230,piloto fluvial,363,109,3,Técnicos,254,233</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 379                                                          379,2018,766420,auxiliar de radiologia (revelacao fotografica),362,225,7,Produção e Indústria I,137,60.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 380                                                                                 380,2018,225210,medico cirurgiao cardiovascular,359,125,2,Profissionais,234,187.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 381                                                                     381,2018,234120,professor de computacao (no ensino superior),357,206,2,Profissionais,151,73.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 382                                                                                               382,2018,311205,tecnico em petroquimica,350,360,3,Técnicos,-10,-2.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 383                                                                               383,2018,141605,gerente de operacoes de transportes,345,648,1,Dirigentes,-303,-46.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 384                                                                                          384,2018,262405,artista (artes visuais),345,182,2,Profissionais,163,89.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 385                                                                385,2018,515220,auxiliar de laboratorio de imunobiologicos,345,118,5,Serviços e Comércio,227,192.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 386                                                              386,2018,131315,gerente de instituicao educacional da area privada,342,1698,1,Dirigentes,-1356,-79.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 387                                                                                   387,2018,223520,enfermeiro de centro cirurgico,340,219,2,Profissionais,121,55.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 388                                                                                                   388,2018,142115,gerente financeiro,339,262,1,Dirigentes,77,29.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 389                      389,2018,732105,eletricista de manutencao de linhas eletricas, telefonicas e de comunicacao de dados,339,325,7,Produção e Indústria I,14,4.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 390                                                                                       390,2018,234620,professor de lingua espanhola,336,240,2,Profissionais,96,40</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 391                                                                                                               391,2018,342120,afretador,333,186,3,Técnicos,147,79</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 392                                                                      392,2018,234664,professor de outras linguas e literaturas,326,441,2,Profissionais,-115,-26.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 393                                                                  393,2018,252545,analista financeiro (instituicoes financeiras),314,125,2,Profissionais,189,151.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 394                                                                                          394,2018,517320,vigia florestal,312,623,5,Serviços e Comércio,-311,-49.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 395                                                                                             395,2018,241210,procurador autarquico,309,261,2,Profissionais,48,18.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 396                                             396,2018,313415,encarregado de manutencao de instrumentos de controle, medicao e similares,306,248,3,Técnicos,58,23.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 397                                                   397,2018,818110,auxiliar de laboratorio de analises fisico-quimicas,305,149,8,Produção e Indústria II,156,104.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 398                                               398,2018,711235,operador de motoniveladora (extracao de minerais solidos),302,187,7,Produção e Indústria I,115,61.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 399                                       399,2018,913120,mecanico de manutencao de maquinas de construcao e terraplenagem,299,347,9,Reparação e Manutenção,-48,-13.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 400                                                                                                     400,2018,321210,tecnico florestal,296,150,3,Técnicos,146,97.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 401                                                                        401,2018,513210,cozinheiro do servico domestico,296,1600,5,Serviços e Comércio,-1304,-81.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 402                                                                                    402,2018,768625,pintor de letreiros,294,131,7,Produção e Indústria I,163,124.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 403                                                                                                  403,2018,322105,tecnico em acupuntura,292,203,3,Técnicos,89,43.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 404                                                                                              404,2018,225260,medico neurocirurgiao,289,149,2,Profissionais,140,94</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 405                                                                                    405,2018,715525,carpinteiro de obras,287,478,7,Produção e Indústria I,-191,-40</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 406                                                                                     406,2018,415115,codificador de dados,286,285,4,Serviços Administrativos,1,0.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 407                                                                                        407,2018,223204,cirurgiao dentista - auditor,285,190,2,Profissionais,95,50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 408                                                          408,2018,234125,professor de pesquisa operacional (no ensino superior),283,128,2,Profissionais,155,121.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 409                                                                                                    409,2018,253115,publicitario,281,113,2,Profissionais,168,148.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 410                                                                                                    410,2018,322410,protetico dentario,281,160,3,Técnicos,121,75.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 411                                                                                               411,2018,271105,chefe de cozinha,280,891,2,Profissionais,-611,-68.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 412                                                                                            412,2018,142415,gerente de almoxarifado,279,110,1,Dirigentes,169,153.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 413                                                                                  413,2018,391125,tecnico de planejamento de producao,278,114,3,Técnicos,164,143.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 414                                                                   414,2018,421105,atendente comercial (agencia postal),270,178,4,Serviços Administrativos,92,51.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 415                                    415,2018,395105,tecnico de apoio em pesquisa e desenvolvimento (exceto agropecuario e florestal),266,382,3,Técnicos,-116,-30.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 416                                             416,2018,919110,lubrificador de veiculos automotores (exceto embarcacoes),266,366,9,Reparação e Manutenção,-100,-27.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 417                                                                       417,2018,715110,operador de compactadora de solos,263,285,7,Produção e Indústria I,-22,-7.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 418                                                                         418,2018,232160,professor de psicologia no ensino medio,261,109,2,Profissionais,152,139.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 419                                                                                              419,2018,517325,vigia portuario,259,247,5,Serviços e Comércio,12,4.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 420                     420,2018,732120,instalador de linhas eletricas de alta e baixa - tensao (rede aerea e subterranea),259,298,7,Produção e Indústria I,-39,-13.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 421                                                                            421,2018,232125,professor de filosofia no ensino medio,258,193,2,Profissionais,65,33.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 422                                                                                   422,2018,717010,operador de martelete,257,276,7,Produção e Indústria I,-19,-6.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 423                                                                                423,2018,413115,auxiliar de faturamento,255,196,4,Serviços Administrativos,59,30.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 424                                                                                424,2018,517205,agente de policia federal,254,474,5,Serviços e Comércio,-220,-46.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 425                                                                                                 425,2018,354210,supervisor de compras,253,144,3,Técnicos,109,75.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 426                                                               426,2018,234110,professor de matematica pura (no ensino superior),252,107,2,Profissionais,145,135.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 427                                                                                      427,2018,421125,operador de caixa,252,211,4,Serviços Administrativos,41,19.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 428                                                               428,2018,991105,conservador de via permanente (trilhos),250,822,9,Reparação e Manutenção,-572,-69.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 429                                                                            429,2018,519205,catador de material reciclavel,249,285,5,Serviços e Comércio,-36,-12.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 430                                                                                              430,2018,312305,tecnico em agrimensura,245,359,3,Técnicos,-114,-31.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 431                                                                                  431,2018,516310,lavador de roupas  a maquina,245,237,5,Serviços e Comércio,8,3.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 432                                                                                             432,2018,724440,serralheiro,243,257,7,Produção e Indústria I,-14,-5.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 433                                                                                433,2018,954125,operador eletromecanico,239,111,9,Reparação e Manutenção,128,115.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 434                                                                                      434,2018,141205,gerente de producao e operacoes,238,166,1,Dirigentes,72,43.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 435                                                                                      435,2018,301105,tecnico de laboratorio industrial,235,148,3,Técnicos,87,58.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 436                                                                                 436,2018,782220,operador de empilhadeira,230,148,7,Produção e Indústria I,82,55.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 437                                                                                                        437,2018,262620,musicologo,229,186,2,Profissionais,43,23.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 438                                                                       438,2018,642015,operador de trator florestal,229,143,6,Agropec., Florestais e Pesca,86,60.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 439                                                                                                       439,2018,251120,sociologo,227,307,2,Profissionais,-80,-26.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 440                                                                                                440,2018,241010,advogado de empresa,223,211,2,Profissionais,12,5.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 441                                                                                                 441,2018,514110,garagista,223,255,5,Serviços e Comércio,-32,-12.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 442                                                                                     442,2018,519305,auxiliar de veterinario,221,165,5,Serviços e Comércio,56,33.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 443                                                                                   443,2018,411025,auxiliar de cartorio,220,138,4,Serviços Administrativos,82,59.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 444                                                                                                 444,2018,224115,preparador de atleta,219,201,2,Profissionais,18,9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 445                                                                                  445,2018,318505,desenhista projetista de arquitetura,217,232,3,Técnicos,-15,-6.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 446                                                          446,2018,511215,cobrador de transportes coletivos (exceto trem),212,380,5,Serviços e Comércio,-168,-44.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 447                                             447,2018,992215,operador de ceifadeira na conservacao de vias permanentes,205,429,9,Reparação e Manutenção,-224,-52.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 448                                                                         448,2018,911110,mecanico de manutencao de bombas,199,102,9,Reparação e Manutenção,97,95.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 449                                                                                                   449,2018,521135,frentista,197,178,5,Serviços e Comércio,19,10.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 450                                                                                           450,2018,515115,parteira leiga,196,515,5,Serviços e Comércio,-319,-61.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 451                                      451,2018,415130,operador de maquina copiadora (exceto operador de grafica rapida),195,204,4,Serviços Administrativos,-9,-4.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 452                                                                               452,2018,710215,inspetor de terraplenagem,195,476,7,Produção e Indústria I,-281,-59</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 453                                                                                                          453,2018,313105,eletrotecnico,194,151,3,Técnicos,43,28.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 454                                                                                  454,2018,322220,tecnico de enfermagem psiquiatrica,193,298,3,Técnicos,-105,-35.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 455                                            455,2018,910105,encarregado de manutencao mecanica de sistemas operacionais,192,235,9,Reparação e Manutenção,-43,-18.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 456                                                                         456,2018,342115,controlador de servicos de maquinas e veiculos,189,192,3,Técnicos,-3,-1.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 457                                                                                                  457,2018,142325,relacoes publicas,188,1172,1,Dirigentes,-984,-84</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 458                                                                   458,2018,412120,supervisor de digitacao e operacao,188,239,4,Serviços Administrativos,-51,-21.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 459                                                                                                459,2018,351810,investigador de policia,187,151,3,Técnicos,36,23.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 460                                    460,2018,234910,professor de artes visuais no ensino superior (artes plasticas e multimidia),183,210,2,Profissionais,-27,-12.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 461                                                                                              461,2018,511405,guia de turismo,183,172,5,Serviços e Comércio,11,6.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 462                                                                                                462,2018,322505,tecnico de ortopedia,181,893,3,Técnicos,-712,-79.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 463                              463,2018,911120,mecanico de manutencao de motores diesel (exceto de veiculos automotores),179,220,9,Reparação e Manutenção,-41,-18.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 464                                                                                            464,2018,415205,carteiro,177,333,4,Serviços Administrativos,-156,-46.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 465                                                                                                         465,2018,223310,zootecnista,175,140,2,Profissionais,35,25</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 466                                                                                             466,2018,223510,enfermeiro auditor,172,674,2,Profissionais,-502,-74.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 467                                                                                                467,2018,225127,medico pneumologista,172,117,2,Profissionais,55,47</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 468                                                                                       468,2018,318105,desenhista tecnico (arquitetura),172,179,3,Técnicos,-7,-3.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 469                                                               469,2018,724105,assentador de canalizacao (edificacoes),170,312,7,Produção e Indústria I,-142,-45.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 470                                                                                        470,2018,768305,artifice do couro,169,151,7,Produção e Indústria I,18,11.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 471                                                                                         471,2018,225235,medico cirurgiao plastico,165,102,2,Profissionais,63,61.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 472                                                                                             472,2018,371110,tecnico em biblioteconomia,165,133,3,Técnicos,32,24.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 473                                                                                473,2018,233115,professor de tecnicas agricolas,164,623,2,Profissionais,-459,-73.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 474                                                                                     474,2018,314410,tecnico em manutencao de maquinas,162,174,3,Técnicos,-12,-6.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 475                                                                                     475,2018,517105,bombeiro de aerodromo,162,213,5,Serviços e Comércio,-51,-23.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 476                                                                                  476,2018,515205,auxiliar de banco de sangue,160,147,5,Serviços e Comércio,13,8.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 477                                                                                          477,2018,234805,professor de economia,159,302,2,Profissionais,-143,-47.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 478                                                                    478,2018,620105,supervisor de exploracao agricola,153,152,6,Agropec., Florestais e Pesca,1,0.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 479                                                                          479,2018,841420,cozinhador de frutas e legumes,153,114,8,Produção e Indústria II,39,34.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 480                                                                                               480,2018,214805,engenheiro agrimensor,152,143,2,Profissionais,9,6.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 481                                                                      481,2018,715305,armador de estrutura de concreto,152,425,7,Produção e Indústria I,-273,-64.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 482                                                               482,2018,224130,tecnico de laboratorio e fiscalizacao desportiva,151,315,2,Profissionais,-164,-52.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 483                                                           483,2018,233205,instrutor de aprendizagem e treinamento agropecuario,150,254,2,Profissionais,-104,-40.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 484                                                          484,2018,612510,produtor de especies frutiferas rasteiras,150,108,6,Agropec., Florestais e Pesca,42,38.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 485                                                                       485,2018,763210,costureiro na confeccao em serie,148,173,7,Produção e Indústria I,-25,-14.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 486                                                                               486,2018,510110,administrador de edificios,147,475,5,Serviços e Comércio,-328,-69.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 487                                                                       487,2018,914420,mecanico de manutencao de tratores,147,156,9,Reparação e Manutenção,-9,-5.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 488                                                                                                       488,2018,223705,dietista,146,301,2,Profissionais,-155,-51.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 489                                                                                    489,2018,225230,medico cirurgiao pediatrico,144,293,2,Profissionais,-149,-50.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 490                                                                           490,2018,521110,vendedor de comercio varejista,143,684,5,Serviços e Comércio,-541,-79.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 491                                                                                                     491,2018,318010,desenhista copista,139,158,3,Técnicos,-19,-12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 492                                                                                 492,2018,632015,viveirista florestal,136,133,6,Agropec., Florestais e Pesca,3,2.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 493                                                    493,2018,860105,supervisor de manutencao eletromecanica (utilidades),136,110,8,Produção e Indústria II,26,23.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 494                                                                        494,2018,114205,dirigentes de entidades de trabalhadores,130,2570,1,Dirigentes,-2440,-94.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 495                                                                                                      495,2018,354815,agente de viagem,130,271,3,Técnicos,-141,-52</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 496                                                                                        496,2018,234815,professor de contabilidade,129,132,2,Profissionais,-3,-2.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 497                                                                               497,2018,414210,apontador de producao,129,345,4,Serviços Administrativos,-216,-62.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 498                                                                                         498,2018,516405,lavador de roupas,128,159,5,Serviços e Comércio,-31,-19.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 499                                                                                      499,2018,623010,inseminador,128,187,6,Agropec., Florestais e Pesca,-59,-31.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 500                                                                                              500,2018,711110,canteiro,128,233,7,Produção e Indústria I,-105,-45.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 501                                                                                        501,2018,782315,motorista de taxi,128,106,7,Produção e Indústria I,22,20.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 502                                                                                                  502,2018,321205,tecnico em madeira,127,690,3,Técnicos,-563,-81.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 503                                                                    503,2018,715315,armador de estrutura de concreto armado,125,116,7,Produção e Indústria I,9,7.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 504                                                                                      504,2018,782105,operador de draga,125,179,7,Produção e Indústria I,-54,-30.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 505                                                                           505,2018,232165,professor de quimica no ensino medio,124,240,2,Profissionais,-116,-48.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 506                                                                                  506,2018,318115,desenhista tecnico (construcao civil),124,110,3,Técnicos,14,12.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 507                                                                               507,2018,715105,operador de bate-estacas,123,196,7,Produção e Indústria I,-73,-37.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 508                                                                                  508,2018,848525,retalhador de carne,123,1542,8,Produção e Indústria II,-1419,-92</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 509                                                                                                         509,2018,261805,fotografo,118,101,2,Profissionais,17,16.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 510                                                                                        510,2018,373105,operador de midia audiovisual,118,213,3,Técnicos,-95,-44.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 511                                                                                   511,2018,420110,supervisor de cobranca,118,111,4,Serviços Administrativos,7,6.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 512                                                                                                       512,2018,322120,massoterapeuta,116,147,3,Técnicos,-31,-21.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 513                                                                       513,2018,234735,professor de filosofia do ensino superior,115,133,2,Profissionais,-18,-13.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 514                                                                                         514,2018,251210,economista agroindustrial,114,103,2,Profissionais,11,10.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 515                                                                  515,2018,233120,professor de tecnicas comerciais e secretariais,113,418,2,Profissionais,-305,-73</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 516                                                                        516,2018,723320,pintor de veiculos (fabricacao),110,128,7,Produção e Indústria I,-18,-14.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 517                                                                                               517,2018,318015,desenhista detalhista,107,208,3,Técnicos,-101,-48.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 518                                                                518,2018,234725,professor de comunicacao social do ensino superior,106,115,2,Profissionais,-9,-7.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 519                                                                                     519,2018,114105,dirigente de partido politico,102,514,1,Dirigentes,-412,-80.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 520                                                                                       520,2018,413210,caixa de banco,100,148,4,Serviços Administrativos,-48,-32.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $`1603-20210203executivomunicipalgraficos12`</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                       ,ano,cod_grande_grupo,descricao_grande_grupo,vinculos_executivo_municipal,total_ano,perc</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1     1,2018,1,membros superiores do poder publico, dirigentes de organizacoes de interesse publico e de empresas, gerentes,530475,6281714,8.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                                                         2,2018,2,profissionais das ciencias e das artes,1718051,6281714,27.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3                                                                                        3,2018,3,tecnicos de nivel medio,1295372,6281714,20.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4                                                                         4,2018,4,trabalhadores de servicos administrativos,939180,6281714,15</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5                                         5,2018,5,trabalhadores dos servicos, vendedores do comercio em lojas e mercados,1357147,6281714,21.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6                                                                6,2018,6,trabalhadores agropecuarios, florestais e da pesca,17130,6281714,0.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7                                                         7,2018,7,trabalhadores da producao de bens e servicos industriais,319606,6281714,5.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8                                                          8,2018,8,trabalhadores da producao de bens e servicos industriais,21826,6281714,0.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9                                                               9,2018,9,trabalhadores em servicos de reparacao e manutencao,82927,6281714,1.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10   10,2017,1,membros superiores do poder publico, dirigentes de organizacoes de interesse publico e de empresas, gerentes,533568,6313181,8.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11                                                                         11,2017,2,profissionais das ciencias e das artes,1702052,6313181,27</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12                                                                                      12,2017,3,tecnicos de nivel medio,1298361,6313181,20.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13                                                                     13,2017,4,trabalhadores de servicos administrativos,953123,6313181,15.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14                                       14,2017,5,trabalhadores dos servicos, vendedores do comercio em lojas e mercados,1378022,6313181,21.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15                                                              15,2017,6,trabalhadores agropecuarios, florestais e da pesca,17645,6313181,0.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16                                                       16,2017,7,trabalhadores da producao de bens e servicos industriais,323438,6313181,5.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17                                                        17,2017,8,trabalhadores da producao de bens e servicos industriais,22686,6313181,0.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18                                                             18,2017,9,trabalhadores em servicos de reparacao e manutencao,84286,6313181,1.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19   19,2016,1,membros superiores do poder publico, dirigentes de organizacoes de interesse publico e de empresas, gerentes,519401,6176372,8.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20                                                                       20,2016,2,profissionais das ciencias e das artes,1616911,6176372,26.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21                                                                                      21,2016,3,tecnicos de nivel medio,1293701,6176372,20.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22                                                                     22,2016,4,trabalhadores de servicos administrativos,966368,6176372,15.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23                                       23,2016,5,trabalhadores dos servicos, vendedores do comercio em lojas e mercados,1329010,6176372,21.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24                                                              24,2016,6,trabalhadores agropecuarios, florestais e da pesca,17802,6176372,0.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25                                                       25,2016,7,trabalhadores da producao de bens e servicos industriais,322512,6176372,5.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26                                                        26,2016,8,trabalhadores da producao de bens e servicos industriais,24543,6176372,0.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27                                                             27,2016,9,trabalhadores em servicos de reparacao e manutencao,86124,6176372,1.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28   28,2015,1,membros superiores do poder publico, dirigentes de organizacoes de interesse publico e de empresas, gerentes,513582,6241547,8.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29                                                                         29,2015,2,profissionais das ciencias e das artes,1625276,6241547,26</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30                                                                                      30,2015,3,tecnicos de nivel medio,1292907,6241547,20.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31                                                                    31,2015,4,trabalhadores de servicos administrativos,1010934,6241547,16.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32                                       32,2015,5,trabalhadores dos servicos, vendedores do comercio em lojas e mercados,1347009,6241547,21.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33                                                              33,2015,6,trabalhadores agropecuarios, florestais e da pesca,18232,6241547,0.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34                                                       34,2015,7,trabalhadores da producao de bens e servicos industriais,322205,6241547,5.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35                                                        35,2015,8,trabalhadores da producao de bens e servicos industriais,21335,6241547,0.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36                                                             36,2015,9,trabalhadores em servicos de reparacao e manutencao,90067,6241547,1.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37   37,2014,1,membros superiores do poder publico, dirigentes de organizacoes de interesse publico e de empresas, gerentes,540590,6284512,8.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38                                                                       38,2014,2,profissionais das ciencias e das artes,1618057,6284512,25.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39                                                                                      39,2014,3,tecnicos de nivel medio,1290870,6284512,20.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40                                                                    40,2014,4,trabalhadores de servicos administrativos,1025812,6284512,16.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41                                       41,2014,5,trabalhadores dos servicos, vendedores do comercio em lojas e mercados,1348201,6284512,21.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42                                                              42,2014,6,trabalhadores agropecuarios, florestais e da pesca,19024,6284512,0.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43                                                       43,2014,7,trabalhadores da producao de bens e servicos industriais,326273,6284512,5.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44                                                        44,2014,8,trabalhadores da producao de bens e servicos industriais,22145,6284512,0.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45                                                             45,2014,9,trabalhadores em servicos de reparacao e manutencao,93540,6284512,1.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46   46,2013,1,membros superiores do poder publico, dirigentes de organizacoes de interesse publico e de empresas, gerentes,534108,6296806,8.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 47                                                                       47,2013,2,profissionais das ciencias e das artes,1632659,6296806,25.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 48                                                                                      48,2013,3,tecnicos de nivel medio,1224561,6296806,19.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 49                                                                    49,2013,4,trabalhadores de servicos administrativos,1083006,6296806,17.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 50                                       50,2013,5,trabalhadores dos servicos, vendedores do comercio em lojas e mercados,1366377,6296806,21.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 51                                                              51,2013,6,trabalhadores agropecuarios, florestais e da pesca,19241,6296806,0.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 52                                                       52,2013,7,trabalhadores da producao de bens e servicos industriais,319991,6296806,5.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 53                                                        53,2013,8,trabalhadores da producao de bens e servicos industriais,22090,6296806,0.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 54                                                             54,2013,9,trabalhadores em servicos de reparacao e manutencao,94773,6296806,1.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 55   55,2012,1,membros superiores do poder publico, dirigentes de organizacoes de interesse publico e de empresas, gerentes,509322,6073260,8.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 56                                                                       56,2012,2,profissionais das ciencias e das artes,1567503,6073260,25.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 57                                                                                        57,2012,3,tecnicos de nivel medio,1155157,6073260,19</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 58                                                                    58,2012,4,trabalhadores de servicos administrativos,1060890,6073260,17.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 59                                       59,2012,5,trabalhadores dos servicos, vendedores do comercio em lojas e mercados,1322979,6073260,21.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 60                                                              60,2012,6,trabalhadores agropecuarios, florestais e da pesca,19151,6073260,0.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 61                                                       61,2012,7,trabalhadores da producao de bens e servicos industriais,318444,6073260,5.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 62                                                        62,2012,8,trabalhadores da producao de bens e servicos industriais,22086,6073260,0.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 63                                                             63,2012,9,trabalhadores em servicos de reparacao e manutencao,97728,6073260,1.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 64   64,2011,1,membros superiores do poder publico, dirigentes de organizacoes de interesse publico e de empresas, gerentes,488479,5927518,8.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 65                                                                       65,2011,2,profissionais das ciencias e das artes,1510602,5927518,25.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 66                                                                                      66,2011,3,tecnicos de nivel medio,1139861,5927518,19.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 67                                                                    67,2011,4,trabalhadores de servicos administrativos,1025698,5927518,17.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 68                                       68,2011,5,trabalhadores dos servicos, vendedores do comercio em lojas e mercados,1310736,5927518,22.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 69                                                              69,2011,6,trabalhadores agropecuarios, florestais e da pesca,18814,5927518,0.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 70                                                       70,2011,7,trabalhadores da producao de bens e servicos industriais,315362,5927518,5.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 71                                                        71,2011,8,trabalhadores da producao de bens e servicos industriais,22603,5927518,0.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 72                                                             72,2011,9,trabalhadores em servicos de reparacao e manutencao,95363,5927518,1.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 73   73,2010,1,membros superiores do poder publico, dirigentes de organizacoes de interesse publico e de empresas, gerentes,452492,5733494,7.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 74                                                                       74,2010,2,profissionais das ciencias e das artes,1446397,5733494,25.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 75                                                                                        75,2010,3,tecnicos de nivel medio,1087423,5733494,19</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 76                                                                    76,2010,4,trabalhadores de servicos administrativos,1020205,5733494,17.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 77                                       77,2010,5,trabalhadores dos servicos, vendedores do comercio em lojas e mercados,1280070,5733494,22.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 78                                                              78,2010,6,trabalhadores agropecuarios, florestais e da pesca,19846,5733494,0.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 79                                                       79,2010,7,trabalhadores da producao de bens e servicos industriais,309442,5733494,5.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 80                                                        80,2010,8,trabalhadores da producao de bens e servicos industriais,22887,5733494,0.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 81                                                             81,2010,9,trabalhadores em servicos de reparacao e manutencao,94732,5733494,1.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 82   82,2009,1,membros superiores do poder publico, dirigentes de organizacoes de interesse publico e de empresas, gerentes,434675,5558839,7.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 83                                                                       83,2009,2,profissionais das ciencias e das artes,1343867,5558839,24.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 84                                                                                      84,2009,3,tecnicos de nivel medio,1083533,5558839,19.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 85                                                                      85,2009,4,trabalhadores de servicos administrativos,1003087,5558839,18</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 86                                       86,2009,5,trabalhadores dos servicos, vendedores do comercio em lojas e mercados,1249634,5558839,22.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 87                                                              87,2009,6,trabalhadores agropecuarios, florestais e da pesca,21303,5558839,0.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 88                                                       88,2009,7,trabalhadores da producao de bens e servicos industriais,306449,5558839,5.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 89                                                        89,2009,8,trabalhadores da producao de bens e servicos industriais,23159,5558839,0.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 90                                                             90,2009,9,trabalhadores em servicos de reparacao e manutencao,93132,5558839,1.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 91   91,2008,1,membros superiores do poder publico, dirigentes de organizacoes de interesse publico e de empresas, gerentes,408818,5338884,7.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 92                                                                       92,2008,2,profissionais das ciencias e das artes,1253172,5338884,23.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 93                                                                                      93,2008,3,tecnicos de nivel medio,1042588,5338884,19.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 94                                                                     94,2008,4,trabalhadores de servicos administrativos,982302,5338884,18.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 95                                       95,2008,5,trabalhadores dos servicos, vendedores do comercio em lojas e mercados,1208547,5338884,22.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 96                                                              96,2008,6,trabalhadores agropecuarios, florestais e da pesca,22781,5338884,0.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 97                                                       97,2008,7,trabalhadores da producao de bens e servicos industriais,306164,5338884,5.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 98                                                        98,2008,8,trabalhadores da producao de bens e servicos industriais,22345,5338884,0.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 99                                                             99,2008,9,trabalhadores em servicos de reparacao e manutencao,92167,5338884,1.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 100 100,2007,1,membros superiores do poder publico, dirigentes de organizacoes de interesse publico e de empresas, gerentes,382922,4977992,7.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 101                                                                     101,2007,2,profissionais das ciencias e das artes,1170943,4977992,23.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 102                                                                                     102,2007,3,tecnicos de nivel medio,961935,4977992,19.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 103                                                                   103,2007,4,trabalhadores de servicos administrativos,868953,4977992,17.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 104                                     104,2007,5,trabalhadores dos servicos, vendedores do comercio em lojas e mercados,1181902,4977992,23.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 105                                                            105,2007,6,trabalhadores agropecuarios, florestais e da pesca,22518,4977992,0.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 106                                                     106,2007,7,trabalhadores da producao de bens e servicos industriais,288255,4977992,5.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 107                                                      107,2007,8,trabalhadores da producao de bens e servicos industriais,21984,4977992,0.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 108                                                           108,2007,9,trabalhadores em servicos de reparacao e manutencao,78580,4977992,1.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 109 109,2006,1,membros superiores do poder publico, dirigentes de organizacoes de interesse publico e de empresas, gerentes,351561,4737649,7.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 110                                                                     110,2006,2,profissionais das ciencias e das artes,1152702,4737649,24.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 111                                                                                     111,2006,3,tecnicos de nivel medio,872141,4737649,18.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 112                                                                   112,2006,4,trabalhadores de servicos administrativos,858297,4737649,18.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 113                                     113,2006,5,trabalhadores dos servicos, vendedores do comercio em lojas e mercados,1108920,4737649,23.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 114                                                            114,2006,6,trabalhadores agropecuarios, florestais e da pesca,22016,4737649,0.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 115                                                     115,2006,7,trabalhadores da producao de bens e servicos industriais,275111,4737649,5.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 116                                                      116,2006,8,trabalhadores da producao de bens e servicos industriais,21143,4737649,0.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 117                                                           117,2006,9,trabalhadores em servicos de reparacao e manutencao,75758,4737649,1.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 118 118,2005,1,membros superiores do poder publico, dirigentes de organizacoes de interesse publico e de empresas, gerentes,329761,4395837,7.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 119                                                                     119,2005,2,profissionais das ciencias e das artes,1052800,4395837,23.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 120                                                                                     120,2005,3,tecnicos de nivel medio,807305,4395837,18.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 121                                                                   121,2005,4,trabalhadores de servicos administrativos,788785,4395837,17.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 122                                     122,2005,5,trabalhadores dos servicos, vendedores do comercio em lojas e mercados,1040280,4395837,23.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 123                                                            123,2005,6,trabalhadores agropecuarios, florestais e da pesca,20210,4395837,0.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 124                                                       124,2005,7,trabalhadores da producao de bens e servicos industriais,264748,4395837,6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 125                                                      125,2005,8,trabalhadores da producao de bens e servicos industriais,20102,4395837,0.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 126                                                           126,2005,9,trabalhadores em servicos de reparacao e manutencao,71846,4395837,1.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 127 127,2004,1,membros superiores do poder publico, dirigentes de organizacoes de interesse publico e de empresas, gerentes,287637,4052583,7.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 128                                                                      128,2004,2,profissionais das ciencias e das artes,979240,4052583,24.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 129                                                                                     129,2004,3,tecnicos de nivel medio,747031,4052583,18.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 130                                                                     130,2004,4,trabalhadores de servicos administrativos,729050,4052583,18</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 131                                      131,2004,5,trabalhadores dos servicos, vendedores do comercio em lojas e mercados,945570,4052583,23.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132                                                            132,2004,6,trabalhadores agropecuarios, florestais e da pesca,19865,4052583,0.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 133                                                     133,2004,7,trabalhadores da producao de bens e servicos industriais,259096,4052583,6.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 134                                                      134,2004,8,trabalhadores da producao de bens e servicos industriais,18842,4052583,0.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 135                                                           135,2004,9,trabalhadores em servicos de reparacao e manutencao,66252,4052583,1.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 136 136,2003,1,membros superiores do poder publico, dirigentes de organizacoes de interesse publico e de empresas, gerentes,281809,3901557,7.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 137                                                                      137,2003,2,profissionais das ciencias e das artes,931574,3901557,23.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 138                                                                                     138,2003,3,tecnicos de nivel medio,716521,3901557,18.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 139                                                                   139,2003,4,trabalhadores de servicos administrativos,689159,3901557,17.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 140                                      140,2003,5,trabalhadores dos servicos, vendedores do comercio em lojas e mercados,919406,3901557,23.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 141                                                            141,2003,6,trabalhadores agropecuarios, florestais e da pesca,20401,3901557,0.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 142                                                     142,2003,7,trabalhadores da producao de bens e servicos industriais,257799,3901557,6.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 143                                                      143,2003,8,trabalhadores da producao de bens e servicos industriais,17973,3901557,0.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 144                                                           144,2003,9,trabalhadores em servicos de reparacao e manutencao,66915,3901557,1.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">get_series</span><span class="op">(</span>series_id <span class="op">=</span> <span class="fl">230</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      ano nivel_federativo cor rem_media nome_cor nome_nivel_federativo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1   2004                E   1  4519.025 Indígena              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   2004                E   2  4031.816   Branca              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3   2004                E   4  3691.235    Preta              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4   2004                E   6  4256.041  Amarela              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5   2004                E   8  3642.660    Parda              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6   2004                F   1  9856.214 Indígena               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7   2004                F   2  9200.807   Branca               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   2004                F   4  6265.668    Preta               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9   2004                F   6  9649.170  Amarela               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10  2004                F   8  7216.168    Parda               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11  2004                M   1  1790.644 Indígena             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12  2004                M   2  2491.084   Branca             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13  2004                M   4  1846.315    Preta             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14  2004                M   6  2120.959  Amarela             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15  2004                M   8  1773.207    Parda             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16  2005                E   1  4937.175 Indígena              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17  2005                E   2  4203.744   Branca              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18  2005                E   4  3756.337    Preta              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19  2005                E   6  4220.798  Amarela              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20  2005                E   8  3783.586    Parda              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21  2005                F   1 10158.056 Indígena               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22  2005                F   2  9670.056   Branca               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23  2005                F   4  6557.583    Preta               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24  2005                F   6 10039.441  Amarela               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25  2005                F   8  7506.265    Parda               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26  2005                M   1  1887.607 Indígena             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27  2005                M   2  2573.102   Branca             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28  2005                M   4  1874.541    Preta             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29  2005                M   6  2157.068  Amarela             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30  2005                M   8  1838.712    Parda             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31  2006                E   1  5726.080 Indígena              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32  2006                E   2  4575.902   Branca              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33  2006                E   4  4087.969    Preta              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34  2006                E   6  4460.946  Amarela              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35  2006                E   8  4188.740    Parda              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36  2006                F   1 11516.015 Indígena               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37  2006                F   2 10934.073   Branca               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38  2006                F   4  7403.890    Preta               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39  2006                F   6 11235.964  Amarela               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40  2006                F   8  8459.459    Parda               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41  2006                M   1  2070.473 Indígena             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42  2006                M   2  2741.615   Branca             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43  2006                M   4  2027.841    Preta             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44  2006                M   6  2325.640  Amarela             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45  2006                M   8  2015.738    Parda             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46  2007                E   1  6292.626 Indígena              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47  2007                E   2  4814.779   Branca              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48  2007                E   4  4247.193    Preta              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49  2007                E   6  4694.247  Amarela              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50  2007                E   8  4358.516    Parda              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51  2007                F   1 10982.924 Indígena               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52  2007                F   2 10549.032   Branca               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53  2007                F   4  7316.424    Preta               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54  2007                F   6 11457.370  Amarela               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55  2007                F   8  8102.741    Parda               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56  2007                M   1  2197.628 Indígena             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57  2007                M   2  2841.842   Branca             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58  2007                M   4  2135.360    Preta             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 59  2007                M   6  2444.818  Amarela             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 60  2007                M   8  2124.567    Parda             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 61  2008                E   1  6546.984 Indígena              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 62  2008                E   2  4900.346   Branca              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 63  2008                E   4  4293.029    Preta              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 64  2008                E   6  4684.763  Amarela              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 65  2008                E   8  4449.904    Parda              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 66  2008                F   1 12488.181 Indígena               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 67  2008                F   2 11884.186   Branca               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 68  2008                F   4  8134.122    Preta               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 69  2008                F   6 12684.177  Amarela               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 70  2008                F   8  9163.278    Parda               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 71  2008                M   1  2324.924 Indígena             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 72  2008                M   2  2960.943   Branca             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 73  2008                M   4  2236.604    Preta             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 74  2008                M   6  2560.729  Amarela             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 75  2008                M   8  2240.009    Parda             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 76  2009                E   1  6688.836 Indígena              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 77  2009                E   2  5056.927   Branca              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 78  2009                E   4  4359.774    Preta              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 79  2009                E   6  4844.675  Amarela              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 80  2009                E   8  4649.487    Parda              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 81  2009                F   1 13454.535 Indígena               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 82  2009                F   2 12867.808   Branca               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 83  2009                F   4  8862.802    Preta               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 84  2009                F   6 14146.405  Amarela               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 85  2009                F   8  9926.399    Parda               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 86  2009                M   1  2409.491 Indígena             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 87  2009                M   2  3069.064   Branca             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 88  2009                M   4  2326.254    Preta             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 89  2009                M   6  2655.172  Amarela             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 90  2009                M   8  2326.014    Parda             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 91  2010                E   1  7168.631 Indígena              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 92  2010                E   2  5324.013   Branca              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 93  2010                E   4  4562.799    Preta              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 94  2010                E   6  5217.690  Amarela              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 95  2010                E   8  4939.888    Parda              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 96  2010                F   1 13001.021 Indígena               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 97  2010                F   2 12014.192   Branca               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 98  2010                F   4  8482.114    Preta               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 99  2010                F   6 13947.566  Amarela               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 100 2010                F   8  9209.543    Parda               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 101 2010                M   1  2469.880 Indígena             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 102 2010                M   2  3180.636   Branca             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 103 2010                M   4  2439.870    Preta             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 104 2010                M   6  2773.909  Amarela             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 105 2010                M   8  2445.325    Parda             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 106 2011                E   1  7213.093 Indígena              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 107 2011                E   2  5489.937   Branca              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 108 2011                E   4  4664.198    Preta              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 109 2011                E   6  5396.970  Amarela              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 110 2011                E   8  5080.939    Parda              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 111 2011                F   1 13711.338 Indígena               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 112 2011                F   2 13330.930   Branca               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 113 2011                F   4  9342.937    Preta               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 114 2011                F   6 14711.613  Amarela               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 115 2011                F   8 10247.837    Parda               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 116 2011                M   1  2568.519 Indígena             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 117 2011                M   2  3283.735   Branca             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 118 2011                M   4  2532.473    Preta             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 119 2011                M   6  2868.355  Amarela             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 120 2011                M   8  2535.799    Parda             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 121 2012                E   1  7621.865 Indígena              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 122 2012                E   2  5894.413   Branca              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 123 2012                E   4  4956.461    Preta              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 124 2012                E   6  5966.544  Amarela              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 125 2012                E   8  5492.872    Parda              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 126 2012                F   1 13025.305 Indígena               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 127 2012                F   2 13020.066   Branca               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 128 2012                F   4  9222.460    Preta               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 129 2012                F   6 14433.591  Amarela               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 130 2012                F   8 10182.768    Parda               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 131 2012                M   1  2849.622 Indígena             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132 2012                M   2  3508.169   Branca             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 133 2012                M   4  2729.405    Preta             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 134 2012                M   6  3101.048  Amarela             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 135 2012                M   8  2758.311    Parda             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 136 2013                E   1  7820.534 Indígena              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 137 2013                E   2  6125.394   Branca              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 138 2013                E   4  5212.801    Preta              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 139 2013                E   6  6228.424  Amarela              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 140 2013                E   8  5746.524    Parda              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 141 2013                F   1 12493.242 Indígena               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 142 2013                F   2 12445.097   Branca               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 143 2013                F   4  8510.981    Preta               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 144 2013                F   6 14379.355  Amarela               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 145 2013                F   8  9695.658    Parda               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 146 2013                M   1  3008.026 Indígena             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 147 2013                M   2  3639.552   Branca             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 148 2013                M   4  2832.762    Preta             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 149 2013                M   6  3135.173  Amarela             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 150 2013                M   8  2867.811    Parda             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 151 2014                E   1  8121.391 Indígena              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 152 2014                E   2  6533.967   Branca              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 153 2014                E   4  5547.861    Preta              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 154 2014                E   6  6685.271  Amarela              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 155 2014                E   8  6106.344    Parda              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 156 2014                F   1 12281.964 Indígena               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157 2014                F   2 12515.181   Branca               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 158 2014                F   4  8490.974    Preta               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 159 2014                F   6 14391.057  Amarela               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 160 2014                F   8  9822.210    Parda               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 161 2014                M   1  3109.209 Indígena             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 162 2014                M   2  3751.880   Branca             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 163 2014                M   4  2956.187    Preta             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 164 2014                M   6  3242.579  Amarela             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 165 2014                M   8  2958.452    Parda             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 166 2015                E   1  8163.123 Indígena              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 167 2015                E   2  6675.871   Branca              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 168 2015                E   4  5703.478    Preta              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 169 2015                E   6  6822.410  Amarela              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 170 2015                E   8  6251.601    Parda              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 171 2015                F   1 12289.452 Indígena               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 172 2015                F   2 12595.075   Branca               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 173 2015                F   4  8832.308    Preta               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 174 2015                F   6 14368.898  Amarela               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 175 2015                F   8 10096.656    Parda               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 176 2015                M   1  3166.007 Indígena             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 177 2015                M   2  3727.451   Branca             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 178 2015                M   4  2957.306    Preta             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 179 2015                M   6  3253.814  Amarela             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 180 2015                M   8  2953.259    Parda             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 181 2016                E   1  7647.167 Indígena              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 182 2016                E   2  6465.657   Branca              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 183 2016                E   4  5460.763    Preta              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 184 2016                E   6  6534.610  Amarela              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 185 2016                E   8  5974.374    Parda              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 186 2016                F   1 11948.697 Indígena               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 187 2016                F   2 11508.821   Branca               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 188 2016                F   4  7866.175    Preta               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 189 2016                F   6 13328.684  Amarela               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 190 2016                F   8  9221.476    Parda               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 191 2016                M   1  3123.696 Indígena             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 192 2016                M   2  3755.510   Branca             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 193 2016                M   4  2975.671    Preta             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 194 2016                M   6  3275.813  Amarela             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 195 2016                M   8  2948.033    Parda             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 196 2017                E   1  7568.603 Indígena              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 197 2017                E   2  6587.441   Branca              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 198 2017                E   4  5503.099    Preta              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 199 2017                E   6  6421.980  Amarela              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 200 2017                E   8  5965.173    Parda              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 201 2017                F   1 12635.362 Indígena               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 202 2017                F   2 12550.452   Branca               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 203 2017                F   4  8917.340    Preta               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 204 2017                F   6 14446.971  Amarela               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 205 2017                F   8 10089.474    Parda               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 206 2017                M   1  3184.278 Indígena             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 207 2017                M   2  3832.140   Branca             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 208 2017                M   4  3032.050    Preta             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 209 2017                M   6  3353.941  Amarela             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 210 2017                M   8  2993.561    Parda             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 211 2018                E   1  7832.811 Indígena              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 212 2018                E   2  6853.642   Branca              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 213 2018                E   4  5720.761    Preta              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 214 2018                E   6  6849.534  Amarela              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 215 2018                E   8  6276.105    Parda              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 216 2018                F   1 11923.546 Indígena               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 217 2018                F   2 12780.758   Branca               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 218 2018                F   4  9136.230    Preta               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 219 2018                F   6 14033.204  Amarela               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 220 2018                F   8 10261.076    Parda               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 221 2018                M   1  3221.001 Indígena             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 222 2018                M   2  3882.029   Branca             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 223 2018                M   4  3084.014    Preta             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 224 2018                M   6  3404.421  Amarela             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 225 2018                M   8  3038.765    Parda             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 226 2019                E   1  7865.962 Indígena              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 227 2019                E   2  6930.731   Branca              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 228 2019                E   4  5797.568    Preta              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 229 2019                E   6  6933.164  Amarela              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 230 2019                E   8  6420.943    Parda              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 231 2019                F   1 14867.021 Indígena               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 232 2019                F   2 14788.049   Branca               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 233 2019                F   4 10444.730    Preta               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 234 2019                F   6 15479.554  Amarela               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 235 2019                F   8 11427.856    Parda               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 236 2019                M   1  3257.281 Indígena             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 237 2019                M   2  3926.008   Branca             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 238 2019                M   4  3120.837    Preta             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 239 2019                M   6  3456.694  Amarela             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 240 2019                M   8  3042.222    Parda             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 241 2020                E   1  7415.117 Indígena              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 242 2020                E   2  6685.455   Branca              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 243 2020                E   4  5633.151    Preta              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 244 2020                E   6  6715.285  Amarela              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 245 2020                E   8  6088.114    Parda              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 246 2020                F   1 11403.846 Indígena               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 247 2020                F   2 12576.543   Branca               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 248 2020                F   4  8662.912    Preta               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 249 2020                F   6 14320.295  Amarela               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 250 2020                F   8 10219.289    Parda               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 251 2020                M   1  3315.191 Indígena             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 252 2020                M   2  3915.305   Branca             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 253 2020                M   4  3133.452    Preta             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 254 2020                M   6  3468.443  Amarela             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 255 2020                M   8  3072.137    Parda             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 256 2021                E   1  6869.472 Indígena              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 257 2021                E   2  6189.442   Branca              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 258 2021                E   4  5217.421    Preta              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 259 2021                E   6  6328.858  Amarela              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 260 2021                E   8  5661.047    Parda              Estadual</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 261 2021                F   1 11055.484 Indígena               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 262 2021                F   2 13420.173   Branca               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 263 2021                F   4  9562.790    Preta               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 264 2021                F   6 14345.523  Amarela               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 265 2021                F   8 10441.602    Parda               Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 266 2021                M   1  3186.184 Indígena             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 267 2021                M   2  3681.942   Branca             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 268 2021                M   4  2961.480    Preta             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 269 2021                M   6  3235.979  Amarela             Municipal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 270 2021                M   8  2909.474    Parda             Municipal</span>
 <span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
-<span class="r-in"><span><span class="fu">get_series</span><span class="op">(</span>series_id <span class="op">=</span> <span class="fl">170</span><span class="op">:</span><span class="fl">172</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">get_series</span><span class="op">(</span>series_id <span class="op">=</span> <span class="fl">230</span><span class="op">:</span><span class="fl">232</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
