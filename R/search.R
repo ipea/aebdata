@@ -17,8 +17,10 @@
 #' @export
 #'
 #' @examplesIf aebdata:::test_connection_aeb() & requireNamespace("stringi", quietly = TRUE)
-#' search_series("remuneração")
+#' \donttest{
+#' search_series("regime de contratação")
 #' search_series(c("remuneração", "raça"), require_all = TRUE)
+#' }
 
 search_series <- function(words, case_insensitive = TRUE, require_all = FALSE) {
 

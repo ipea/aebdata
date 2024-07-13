@@ -40,9 +40,11 @@ list_themes <- function() {
 #' @export
 #'
 #' @examplesIf aebdata:::test_connection_aeb("temas")
-#' list_series()
 #' list_series(theme_id = c(42, 50))
+#' \donttest{
+#' list_series()
 #' list_series(theme_id = 35, theme_title = c("Organizações do Estado"))
+#' }
 
 list_series <- function(theme_id = NULL, theme_title = NULL) {
 

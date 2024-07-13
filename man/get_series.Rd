@@ -25,7 +25,9 @@ data.frame corresponding to a series.
 }
 \examples{
 \dontshow{if (aebdata:::test_connection_aeb()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
-get_series(series_id = 170)
-get_series(series_id = 170:172)
+get_series(series_id = 230)
+\donttest{
+get_series(series_id = 230:232)
+}
 \dontshow{\}) # examplesIf}
 }

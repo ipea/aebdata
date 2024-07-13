@@ -15,8 +15,10 @@
 #' @export
 #'
 #' @examplesIf aebdata:::test_connection_aeb()
-#' get_series(series_id = 170)
-#' get_series(series_id = 170:172)
+#' get_series(series_id = 230)
+#' \donttest{
+#' get_series(series_id = 230:232)
+#' }
 
 get_series <- function(series_id = NULL, series_title = NULL) {
 

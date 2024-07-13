@@ -19,8 +19,10 @@ available for download or not.
 }
 \examples{
 \dontshow{if (aebdata:::test_connection_aeb("temas")) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
-list_series()
 list_series(theme_id = c(42, 50))
+\donttest{
+list_series()
 list_series(theme_id = 35, theme_title = c("Organizações do Estado"))
+}
 \dontshow{\}) # examplesIf}
 }
