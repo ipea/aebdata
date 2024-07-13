@@ -1,6 +1,6 @@
 Package: aebdata
 Title: Access Data from the Atlas do Estado Brasileiro
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person("Hugo", "Macedo", , "aebdata@hhmace.do",
            role = c("aut", "cre", "cph"))
