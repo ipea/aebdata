@@ -65,7 +65,60 @@ or combined to filter the selected themes.</p></dd>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">list_series</span><span class="op">(</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">list_series</span><span class="op">(</span>theme_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">42</span>, <span class="fl">50</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                          theme_title theme_id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  Presidentes, partidos e coalizões       42</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  Presidentes, partidos e coalizões       42</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  Presidentes, partidos e coalizões       42</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  Presidentes, partidos e coalizões       42</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  Presidentes, partidos e coalizões       42</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  Presidentes, partidos e coalizões       42</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7             Organizações do Estado       50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8             Organizações do Estado       50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9             Organizações do Estado       50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10            Organizações do Estado       50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11            Organizações do Estado       50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12            Organizações do Estado       50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13            Organizações do Estado       50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14            Organizações do Estado       50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15            Organizações do Estado       50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16            Organizações do Estado       50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                         series_title</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                                                 Presidentes, partidos e coalizões: 1. Gabinetes ministeriais no Brasil (1989-2020)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                    Presidentes, partidos e coalizões: 2. Proporcionalidade entre ministérios e cadeiras legislativas, por gabinete</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                                                   Presidentes, partidos e coalizões: 3a. Trajetória da posição ideológica dos partidos (1990-2017)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4                                                        Presidentes, partidos e coalizões: 3b. Percentual de ministérios, por partido e presidência</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                                                         Presidentes, partidos e coalizões: 4. Percentual de ministérios, por partido e presidência</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  Presidentes, partidos e coalizões: 5. Distribuição dos ministérios por partido, durante cada presidência (em número de ministérios e % acumulada)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7                                                                   CAP 16 Trabalhadores dos Cras e Creas, por área de formação - Brasil (2011-2017)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8                                                               CAP 16 Trabalhadores dos Cras e Creas, por vínculos de trabalho - Brasil (2011-2017)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9                                         CAP 16 Trabalhadores nos equipamentos do Suas: rede governamental e não governamental - Brasil (2011-2017)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10                                                                         CAP 17 Estabelecimentos de saúde, segundo a natureza jurídica (2012-2021)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11                                                                           CAP 17 Habitantes por estabelecimentos de saúde, por região (2006-2021)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12                                                   CAP 17 Número de estabelecimentos que compõem o SUS, por grupo de natureza jurídica (2012-2021)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13                                                                                  CAP 17 Número de habitantes por hospital, por região (2006-2021)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14                                                       CAP 17 Total anual dos quatro tipos mais numerosos de estabelecimentos de saúde (2006-2021)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15                                                                      CAP 17 Total de estabelecimentos de saúde comparados, por região (2006-2021)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16                                                             CAP 17 Trajetória do volume das demais estabelecimentos do setor de saúde (2006-2021)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    series_id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1        154</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2        155</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3        156</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4        163</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5        157</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6        158</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7        221</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8        222</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9        223</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10       244</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11       247</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12       245</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13       248</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14       242</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15       246</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16       243</span>
+<span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+<span class="r-in"><span><span class="fu">list_series</span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                                                 theme_title theme_id</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1   Totais de vínculos de trabalho no funcionalismo público       21</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2   Totais de vínculos de trabalho no funcionalismo público       21</span>
@@ -768,58 +821,6 @@ or combined to filter the selected themes.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 231       242</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 232       246</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 233       243</span>
-<span class="r-in"><span><span class="fu">list_series</span><span class="op">(</span>theme_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">42</span>, <span class="fl">50</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                          theme_title theme_id</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1  Presidentes, partidos e coalizões       42</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2  Presidentes, partidos e coalizões       42</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  Presidentes, partidos e coalizões       42</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  Presidentes, partidos e coalizões       42</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5  Presidentes, partidos e coalizões       42</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  Presidentes, partidos e coalizões       42</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7             Organizações do Estado       50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8             Organizações do Estado       50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9             Organizações do Estado       50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10            Organizações do Estado       50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11            Organizações do Estado       50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12            Organizações do Estado       50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13            Organizações do Estado       50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14            Organizações do Estado       50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15            Organizações do Estado       50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16            Organizações do Estado       50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                         series_title</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                                                 Presidentes, partidos e coalizões: 1. Gabinetes ministeriais no Brasil (1989-2020)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                    Presidentes, partidos e coalizões: 2. Proporcionalidade entre ministérios e cadeiras legislativas, por gabinete</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3                                                   Presidentes, partidos e coalizões: 3a. Trajetória da posição ideológica dos partidos (1990-2017)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4                                                        Presidentes, partidos e coalizões: 3b. Percentual de ministérios, por partido e presidência</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5                                                         Presidentes, partidos e coalizões: 4. Percentual de ministérios, por partido e presidência</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  Presidentes, partidos e coalizões: 5. Distribuição dos ministérios por partido, durante cada presidência (em número de ministérios e % acumulada)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7                                                                   CAP 16 Trabalhadores dos Cras e Creas, por área de formação - Brasil (2011-2017)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8                                                               CAP 16 Trabalhadores dos Cras e Creas, por vínculos de trabalho - Brasil (2011-2017)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9                                         CAP 16 Trabalhadores nos equipamentos do Suas: rede governamental e não governamental - Brasil (2011-2017)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10                                                                         CAP 17 Estabelecimentos de saúde, segundo a natureza jurídica (2012-2021)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11                                                                           CAP 17 Habitantes por estabelecimentos de saúde, por região (2006-2021)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12                                                   CAP 17 Número de estabelecimentos que compõem o SUS, por grupo de natureza jurídica (2012-2021)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13                                                                                  CAP 17 Número de habitantes por hospital, por região (2006-2021)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14                                                       CAP 17 Total anual dos quatro tipos mais numerosos de estabelecimentos de saúde (2006-2021)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15                                                                      CAP 17 Total de estabelecimentos de saúde comparados, por região (2006-2021)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16                                                             CAP 17 Trajetória do volume das demais estabelecimentos do setor de saúde (2006-2021)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    series_id</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1        154</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2        155</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3        156</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4        163</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5        157</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6        158</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7        221</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8        222</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9        223</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10       244</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11       247</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12       245</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13       248</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14       242</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15       246</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16       243</span>
 <span class="r-in"><span><span class="fu">list_series</span><span class="op">(</span>theme_id <span class="op">=</span> <span class="fl">35</span>, theme_title <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Organizações do Estado"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                      theme_title theme_id</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1  Escolaridade no setor público       35</span>
@@ -896,6 +897,7 @@ or combined to filter the selected themes.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 22       242</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 23       246</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 24       243</span>
+<span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
