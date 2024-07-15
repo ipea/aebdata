@@ -15,9 +15,14 @@
 #' @export
 #'
 #' @examplesIf aebdata:::test_connection_aeb()
-#' get_series(series_id = 230)
+#' # Get the series 230 and print the head
+#' serie_230 <- get_series(series_id = 230)
+#' head(serie_230)
+#'
+#' # Get the series from 230 to 232 and print the head of the 232
 #' \donttest{
-#' get_series(series_id = 230:232)
+#' series <- get_series(series_id = 230:232)
+#' head(series[["232"]])
 #' }
 
 get_series <- function(series_id = NULL, series_title = NULL) {

@@ -7,7 +7,9 @@
 #' @export
 #'
 #' @examplesIf aebdata:::test_connection_aeb("temas")
-#' list_themes()
+#' # Get the data frame and show the theme titles
+#' themes <- list_themes()
+#' themes$theme_title
 
 list_themes <- function() {
 
@@ -40,10 +42,16 @@ list_themes <- function() {
 #' @export
 #'
 #' @examplesIf aebdata:::test_connection_aeb("temas")
-#' list_series(theme_id = c(42, 50))
+#' series <- list_series(theme_id = c(42, 50))
+#' series$series_title
 #' \donttest{
-#' list_series()
-#' list_series(theme_id = 35, theme_title = c("Organizações do Estado"))
+#' # List all series and count the number of series available
+#' all_series <- list_series()
+#' length(unique(all_series$series_id))
+#'
+#' # Count the number of series from Organizações do Estado theme
+#' organizacoes <- list_series(theme_title = "Organizações do Estado")
+#' nrow(organizacoes)
 #' }
 
 list_series <- function(theme_id = NULL, theme_title = NULL) {

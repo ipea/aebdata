@@ -19,10 +19,16 @@ available for download or not.
 }
 \examples{
 \dontshow{if (aebdata:::test_connection_aeb("temas")) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
-list_series(theme_id = c(42, 50))
+series <- list_series(theme_id = c(42, 50))
+series$series_title
 \donttest{
-list_series()
-list_series(theme_id = 35, theme_title = c("Organizações do Estado"))
+# List all series and count the number of series available
+all_series <- list_series()
+length(unique(all_series$series_id))
+
+# Count the number of series from Organizações do Estado theme
+organizacoes <- list_series(theme_title = "Organizações do Estado")
+nrow(organizacoes)
 }
 \dontshow{\}) # examplesIf}
 }

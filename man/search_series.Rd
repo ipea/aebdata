@@ -28,8 +28,11 @@ importance.
 \examples{
 \dontshow{if (aebdata:::test_connection_aeb() & requireNamespace("stringi", quietly = TRUE)) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 \donttest{
-search_series("regime de contratação")
-search_series(c("remuneração", "raça"), require_all = TRUE)
+search_result <- search_series("regime de contratação")
+search_result$series_title
+
+search_result <- search_series(c("remuneração", "raça"), require_all = TRUE)
+search_result$series_title
 }
 \dontshow{\}) # examplesIf}
 }
