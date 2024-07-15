@@ -4,10 +4,10 @@ Version: 0.1.0
 Authors@R: 
     person("Hugo", "Macedo", , "aebdata@hhmace.do",
            role = c("aut", "cre", "cph"))
-Description: This tool facilitates access to the data from the Atlas do Estado
-    Brasileiro, maintained by the Instituto de Pesquisa Economica Aplicada
-    (Ipea). It allows users to search for specific series, list series or
-    themes, and download data when available.
+Description: Facilitates access to the data from the Atlas do Estado Brasileiro
+    (<https://www.ipea.gov.br/atlasestado/>), maintained by the Instituto de
+    Pesquisa Econômica Aplicada (Ipea). It allows users to search for specific
+    series, list series or themes, and download data when available.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
