@@ -687,6 +687,21 @@ Desigualdades no setor público
 49
 </td>
 <td style="text-align:left;">
+Remuneração média mensal no setor público, nos Poderes e nos níveis
+federativos, por sexo (1985-2021)
+</td>
+<td style="text-align:right;">
+94
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Desigualdades no setor público
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:left;">
 Remuneração média mensal nos níveis federativos ou Poderes, por sexo
 (1986-2017)
 </td>
@@ -717,10 +732,7 @@ sexo e cor (2004-2021)</em>” and “<em>Total de vínculos públicos por cor
 e sexo (2004-2021)</em>”. To retrieve the data, we will use the
 <code><a href="../reference/get_series.html">get_series()</a></code> function with the desired ids.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">downloaded_series</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_series.html">get_series</a></span><span class="op">(</span>series_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">240</span>, <span class="fl">241</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning in get_series(series_id = c(240, 241)): The following series don't have any data available:</span></span>
-<span><span class="co">#&gt;  id  title</span></span>
-<span><span class="co">#&gt;  241 Total de vínculos públicos por cor e sexo (2004-2021)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">downloaded_series</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_series.html">get_series</a></span><span class="op">(</span>series_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">240</span>, <span class="fl">241</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>And now the data frame is available:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">downloaded_series</span><span class="op">$</span><span class="va">`240`</span><span class="op">)</span></span></code></pre></div>
@@ -735,28 +747,14 @@ nome_sexo
 <th style="text-align:left;">
 nome_cor
 </th>
-<th style="text-align:right;">
+<th style="text-align:left;">
 remuneracao_media
 </th>
 </tr></thead>
 <tbody>
 <tr>
 <td style="text-align:right;">
-2005
-</td>
-<td style="text-align:left;">
-Homem
-</td>
-<td style="text-align:left;">
-Branca
-</td>
-<td style="text-align:right;">
-4560.245
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-2021
+2004
 </td>
 <td style="text-align:left;">
 Homem
@@ -764,13 +762,27 @@ Homem
 <td style="text-align:left;">
 Preta
 </td>
-<td style="text-align:right;">
-4611.526
+<td style="text-align:left;">
+33.914.253
 </td>
 </tr>
 <tr>
 <td style="text-align:right;">
-2021
+2004
+</td>
+<td style="text-align:left;">
+Mulher
+</td>
+<td style="text-align:left;">
+Indígena
+</td>
+<td style="text-align:left;">
+31.982.719
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2004
 </td>
 <td style="text-align:left;">
 Homem
@@ -778,41 +790,41 @@ Homem
 <td style="text-align:left;">
 Indígena
 </td>
-<td style="text-align:right;">
-5386.771
+<td style="text-align:left;">
+4.138.483
 </td>
 </tr>
 <tr>
 <td style="text-align:right;">
-2016
+2004
+</td>
+<td style="text-align:left;">
+Mulher
+</td>
+<td style="text-align:left;">
+Amarela
+</td>
+<td style="text-align:left;">
+3.607.482
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2004
 </td>
 <td style="text-align:left;">
 Homem
 </td>
 <td style="text-align:left;">
-Preta
+Parda
 </td>
-<td style="text-align:right;">
-4812.625
+<td style="text-align:left;">
+36.340.293
 </td>
 </tr>
 <tr>
 <td style="text-align:right;">
-2005
-</td>
-<td style="text-align:left;">
-Homem
-</td>
-<td style="text-align:left;">
-Preta
-</td>
-<td style="text-align:right;">
-3418.631
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-2013
+2004
 </td>
 <td style="text-align:left;">
 Mulher
@@ -820,8 +832,8 @@ Mulher
 <td style="text-align:left;">
 Branca
 </td>
-<td style="text-align:right;">
-4725.442
+<td style="text-align:left;">
+32.386.196
 </td>
 </tr>
 </tbody>
