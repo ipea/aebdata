@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/hhmacedo/aebdata/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/hhmacedo/aebdata/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/ipea/aebdata/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ipea/aebdata/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The package aebdata is part of an effort by the [Atlas do Estado
@@ -29,10 +29,10 @@ install.packages("aebdata")
 # The first is a more verbose and human-readable way, using pak:
 
 # install.packages("pak")
-pak::pkg_install("hhmacedo/aebdata")
+pak::pkg_install("ipea/aebdata")
 
 # The second is a lighter and more programmatic version:
 
 # install.packages("remotes")
-remotes::install_github("hhmacedo/aebdata")
+remotes::install_github("ipea/aebdata")
 ```
