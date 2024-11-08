@@ -1,7 +1,7 @@
 test_that("search works", {
   skip_if_not_installed("stringi")
   rds <- readRDS(test_path("_data", "search.rds"))
-  expect_equal(search_series("participação"), rds$simple)
+  expect_equal(search_series("militares"), rds$simple)
 })
 
 test_that("require_all works", {
