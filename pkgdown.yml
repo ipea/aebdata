@@ -3,7 +3,7 @@ pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   exploring-data: exploring-data.html
-last_built: 2025-01-12T22:52Z
+last_built: 2025-02-03T17:33Z
 urls:
   reference: https://hhmacedo.github.io/aebdata/reference
   article: https://hhmacedo.github.io/aebdata/articles
