@@ -13,6 +13,16 @@
 
 list_themes <- function() {
 
+  # Check connection
+  if(!test_connection_aeb()) {
+
+    stop(
+      "Could not connect. Please, check your connection or try again later.",
+      call. = FALSE
+    )
+
+  }
+
   # Get the themes from API
   df_themes <- "https://www.ipea.gov.br/atlasestado/api/v1/temas" |>
     httr2::request() |>

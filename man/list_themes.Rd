@@ -14,7 +14,7 @@ A data.frame
 their corresponding ids.
 }
 \examples{
-\dontshow{if (aebdata:::test_connection_aeb("temas")) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (aebdata:::test_connection_aeb("temas")) withAutoprint(\{ # examplesIf}
 # Get the data frame and show the theme titles
 themes <- list_themes()
 themes$theme_title

@@ -1,6 +1,6 @@
 Package: aebdata
 Title: Access Data from the Atlas do Estado Brasileiro
-Version: 0.1.4
+Version: 0.1.5
 Authors@R: 
     person("Hugo", "Macedo", , "aebdata@hhmace.do",
            role = c("aut", "cre", "cph"))
@@ -11,7 +11,6 @@ Description: Facilitates access to the data from the Atlas do Estado Brasileiro
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
 Depends: R (>= 4.2.0)
 Suggests: 
     knitr,
@@ -26,3 +25,4 @@ Imports:
     readr,
     rvest
 VignetteBuilder: knitr
+Config/roxygen2/version: 8.0.0

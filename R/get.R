@@ -34,6 +34,16 @@ get_series <- function(series_id = NULL, series_title = NULL) {
 
   } else {
 
+    # Check connection
+    if(!test_connection_aeb()) {
+
+      stop(
+        "Could not connect. Please, check your connection or try again later.",
+        call. = FALSE
+      )
+
+    }
+
     # List all series
     df_series <- "https://www.ipea.gov.br/atlasestado/api/v1/series" |>
       httr2::request() |>
