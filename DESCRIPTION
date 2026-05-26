@@ -1,6 +1,6 @@
 Package: aebdata
 Title: Access Data from the Atlas do Estado Brasileiro
-Version: 0.1.5
+Version: 0.1.6
 Authors@R: 
     person("Hugo", "Macedo", , "aebdata@hhmace.do",
            role = c("aut", "cre", "cph"))
@@ -21,6 +21,7 @@ Config/testthat/edition: 3
 URL: https://github.com/ipea/aebdata
 BugReports: https://github.com/ipea/aebdata/issues
 Imports: 
+    cli,
     httr2,
     readr,
     rvest
