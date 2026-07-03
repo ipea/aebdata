@@ -14,7 +14,7 @@
 #' @return A data.frame or a list containing the data from the series
 #' @export
 #'
-#' @examplesIf aebdata:::test_connection_aeb()
+#' @examplesIf interactive() && curl::has_internet()
 #' # Get the series 230 and print the head
 #' serie_230 <- get_series(series_id = 230)
 #' head(serie_230)
@@ -179,7 +179,7 @@ get_series <- function(series_id = NULL, series_title = NULL) {
 #'
 #' @return a data.frame or a list
 #'
-#' @examplesIf aebdata:::test_connection_aeb()
+#' @examplesIf interactive() && curl::has_internet()
 #' get_series_csv(231)
 #'
 #' @noRd

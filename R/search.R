@@ -16,7 +16,7 @@
 #' @return A data.frame
 #' @export
 #'
-#' @examplesIf aebdata:::test_connection_aeb() & requireNamespace("stringi", quietly = TRUE)
+#' @examplesIf interactive() && curl::has_internet() && requireNamespace("stringi", quietly = TRUE)
 #' \donttest{
 #' search_result <- search_series("regime de contratação")
 #' search_result$series_title

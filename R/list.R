@@ -6,7 +6,7 @@
 #' @return A data.frame
 #' @export
 #'
-#' @examplesIf aebdata:::test_connection_aeb("temas")
+#' @examplesIf interactive() && curl::has_internet()
 #' # Get the data frame and show the theme titles
 #' themes <- list_themes()
 #' themes$theme_title
@@ -52,7 +52,7 @@ list_themes <- function() {
 #' @return A data.frame
 #' @export
 #'
-#' @examplesIf aebdata:::test_connection_aeb("temas")
+#' @examplesIf interactive() && curl::has_internet()
 #' series <- list_series(theme_id = c(42, 50))
 #' series$series_title
 #' \donttest{
@@ -132,7 +132,7 @@ list_series <- function(theme_id = NULL, theme_title = NULL) {
 #'
 #' @return A data.frame containing serie_title and serie_id.
 #'
-#' @examplesIf aebdata:::test_connection_aeb()
+#' @examplesIf interactive() && curl::has_internet()
 #' list_series_id(theme_id = 26)
 #'
 #' @noRd
