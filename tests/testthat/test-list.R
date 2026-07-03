@@ -1,4 +1,5 @@
 test_that("list works", {
+  skip_if_offline()
   rds <- readRDS(test_path("_data", "list.rds"))
   expect_equal(list_themes(), rds$themes)
   expect_equal(list_series(theme_id = 50,
@@ -7,6 +8,7 @@ test_that("list works", {
 })
 
 test_that("wrong parameters", {
+  skip_if_offline()
   # Totally wrong
   expect_error(list_series(theme_id = 1))
   expect_error(list_series(theme_title = "Test"))

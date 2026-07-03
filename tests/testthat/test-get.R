@@ -1,8 +1,10 @@
 test_that("missing parameters", {
+  skip_if_offline()
   expect_error(get_series())
 })
 
 test_that("wrong parameters", {
+  skip_if_offline()
   # Totally wrong
   expect_error(get_series(series_id = 1))
   expect_error(get_series(series_title = "Test"))
@@ -13,6 +15,7 @@ test_that("wrong parameters", {
 })
 
 test_that("empty series", {
+  skip_if_offline()
   # all empty
   expect_error(get_series(series_id = 162))
   expect_error(get_series(series_id = c(162, 177)))
@@ -21,6 +24,7 @@ test_that("empty series", {
 })
 
 test_that("get works", {
+  skip_if_offline()
   rds <- readRDS(test_path("_data", "get.rds"))
   expect_equal(get_series(series_id = 215), rds$one)
   expect_equal(get_series(series_id = c(215, 197)),
@@ -29,6 +33,7 @@ test_that("get works", {
 })
 
 test_that("get_csv works", {
+  skip_if_offline()
   rds <- readRDS(test_path("_data", "get.rds"))
   expect_null(get_series_csv(162))
   expect_equal(get_series_csv(215), rds$one)
