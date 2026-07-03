@@ -2,6 +2,8 @@
 
 ## aebdata 0.1.6
 
+CRAN release: 2026-05-27
+
 ## aebdata 0.1.5
 
 CRAN release: 2026-05-16
