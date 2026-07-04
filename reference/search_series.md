@@ -35,23 +35,13 @@ A data.frame
 ## Examples
 
 ``` r
+if (FALSE) { # interactive() && curl::has_internet() && requireNamespace("stringi", quietly = TRUE)
 # \donttest{
 search_result <- search_series("regime de contratação")
 search_result$series_title
-#> [1] "Total e proporção dos vínculos públicos e dos níveis federativos, por regime de contratação (1994-2023)"
 
 search_result <- search_series(c("remuneração", "raça"), require_all = TRUE)
 search_result$series_title
-#>  [1] "Remuneração líquida média mensal no Executivo civil federal ativo, por raça e escolaridade (1999-2020)"           
-#>  [2] "Remuneração líquida média mensal no Executivo civil federal ativo, por raça e escolaridade (1999-2020)"           
-#>  [3] "Remuneração líquida média mensal no Executivo civil federal ativo, por raça e escolaridade (1999-2020)"           
-#>  [4] "Remuneração líquida média mensal no Executivo civil federal ativo, por raça e escolaridade (1999-2020)"           
-#>  [5] "Remuneração líquida média mensal no Executivo civil federal ativo, por sexo e raça (1999-2020)"                   
-#>  [6] "Remuneração líquida média mensal no Executivo civil federal ativo, por sexo e raça (1999-2020)"                   
-#>  [7] "Remuneração líquida média mensal no Executivo civil federal ativo, por sexo e raça (1999-2020)"                   
-#>  [8] "Remuneração líquida média mensal no Executivo civil federal ativo, por sexo e raça (1999-2020)"                   
-#>  [9] "Distribuição da remuneração média e dos vínculos de trabalho por raça, sexo, Poder e nível federativo (2004-2022)"
-#> [10] "Distribuição da remuneração média e dos vínculos de trabalho por raça, sexo, Poder e nível federativo (2004-2022)"
-#> [11] "Distribuição da remuneração média e dos vínculos de trabalho por raça, sexo, Poder e nível federativo (2004-2022)"
 # }
+}
 ```

@@ -74,29 +74,17 @@ data.frame corresponding to a series.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Get the series 230 and print the head</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># interactive() &amp;&amp; curl::has_internet()</span></span></span>
+<span class="r-in"><span><span class="co"># Get the series 230 and print the head</span></span></span>
 <span class="r-in"><span><span class="va">serie_230</span> <span class="op">&lt;-</span> <span class="fu">get_series</span><span class="op">(</span>series_id <span class="op">=</span> <span class="fl">230</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">serie_230</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    ano nivel_federativo cor rem_media nome_cor nome_nivel_federativo</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 2004                E   1  4519.025 Indígena              Estadual</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 2004                E   2  4031.816   Branca              Estadual</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 2004                E   4  3691.235    Preta              Estadual</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 2004                E   6  4256.041  Amarela              Estadual</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 2004                E   8  3642.660    Parda              Estadual</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6 2004                F   1  9856.214 Indígena               Federal</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Get the series from 230 to 232 and print the head of the 232</span></span></span>
 <span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="va">series</span> <span class="op">&lt;-</span> <span class="fu">get_series</span><span class="op">(</span>series_id <span class="op">=</span> <span class="fl">230</span><span class="op">:</span><span class="fl">232</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">series</span><span class="op">[[</span><span class="st">"232"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       poder     cor  ano  total</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Executivo Amarela 2021 102071</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 Executivo Amarela 2020 102398</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 Executivo Amarela 2019 106294</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 Executivo Amarela 2018 109614</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 Executivo Amarela 2017 113781</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6 Executivo Amarela 2016 112875</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
