@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">aebdata</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.6</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.7</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -75,11 +75,700 @@ scenario would be to compile a list of the themes that are
 accessible.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/list_themes.html">list_themes</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<table class="table">
+<thead><tr>
+<th style="text-align:left;">
+theme_title
+</th>
+<th style="text-align:right;">
+theme_id
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Totais de vínculos de trabalho no funcionalismo público
+</td>
+<td style="text-align:right;">
+21
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vínculos públicos por Poderes e níveis federativos
+</td>
+<td style="text-align:right;">
+25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Remunerações no setor público
+</td>
+<td style="text-align:right;">
+26
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vínculos e remunerações no setor público, por sexo
+</td>
+<td style="text-align:right;">
+28
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ministérios e áreas de políticas no Brasil e no mundo
+</td>
+<td style="text-align:right;">
+33
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Densidade dos vínculos públicos na população
+</td>
+<td style="text-align:right;">
+34
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Escolaridade no setor público
+</td>
+<td style="text-align:right;">
+35
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Carreiras e ocupações
+</td>
+<td style="text-align:right;">
+36
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cargos de confiança no funcionalismo público
+</td>
+<td style="text-align:right;">
+37
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Despesas com vínculos ativos no funcionalismo público
+</td>
+<td style="text-align:right;">
+38
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Funcionalismo público por cor/raça
+</td>
+<td style="text-align:right;">
+41
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Presidentes, partidos e coalizões
+</td>
+<td style="text-align:right;">
+42
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mapa da Defensoria Pública Estadual
+</td>
+<td style="text-align:right;">
+43
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Militares na burocracia
+</td>
+<td style="text-align:right;">
+44
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Desigualdades no setor público
+</td>
+<td style="text-align:right;">
+49
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Organizações do Estado
+</td>
+<td style="text-align:right;">
+50
+</td>
+</tr>
+</tbody>
+</table>
 <p>The two themes to be explored here will be “<em>Funcionalismo público
 por cor/raça</em>” and “<em>Desigualdades no setor público</em>”. Let’s
 use their respective ids in the series listing:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/list_series.html">list_series</a></span><span class="op">(</span>theme_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">41</span>,<span class="fl">49</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<table class="table">
+<thead><tr>
+<th style="text-align:left;">
+theme_title
+</th>
+<th style="text-align:right;">
+theme_id
+</th>
+<th style="text-align:left;">
+series_title
+</th>
+<th style="text-align:right;">
+series_id
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Funcionalismo público por cor/raça
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+DAS 5 e 6 do Executivo federal, por cor ou raça, sexo e órgão superior
+(2000, 2005, 2015, 2020)
+</td>
+<td style="text-align:right;">
+159
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Funcionalismo público por cor/raça
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+Mapa de ações afirmativas e leis de cotas raciais no serviço público
+</td>
+<td style="text-align:right;">
+162
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Funcionalismo público por cor/raça
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+Nota Técnica - Cor ou raça dos servidores civis ativos do Executivo
+federal (1999-2020)
+</td>
+<td style="text-align:right;">
+164
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Funcionalismo público por cor/raça
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+Percentual de vínculos em funções de Direção e Assessoramento Superior
+(DAS), por sexo e cor ou raça (1999-2020)
+</td>
+<td style="text-align:right;">
+160
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Funcionalismo público por cor/raça
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+Remuneração líquida média mensal no Executivo civil federal ativo, por
+raça e escolaridade (1999-2020)
+</td>
+<td style="text-align:right;">
+144
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Funcionalismo público por cor/raça
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+Remuneração líquida média mensal no Executivo civil federal ativo, por
+sexo e raça (1999-2020)
+</td>
+<td style="text-align:right;">
+145
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Funcionalismo público por cor/raça
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+Remuneração média mensal de vínculos públicos nos níveis federativos,
+por cor (2004-2021)
+</td>
+<td style="text-align:right;">
+230
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Funcionalismo público por cor/raça
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+Remuneração média mensal de vínculos públicos nos Poderes, por cor
+(2004-2021)
+</td>
+<td style="text-align:right;">
+229
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Funcionalismo público por cor/raça
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+Remuneração média mensal de vínculos públicos por cor (2004 - 2021)
+</td>
+<td style="text-align:right;">
+227
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Funcionalismo público por cor/raça
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+Remuneração média mensal de vínculos públicos por sexo e cor (2004-2021)
+</td>
+<td style="text-align:right;">
+240
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Funcionalismo público por cor/raça
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+Total de vínculos civis ativos no Executivo federal, por sexo e cor ou
+raça (1999-2024)
+</td>
+<td style="text-align:right;">
+152
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Funcionalismo público por cor/raça
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+Total de vínculos em funções de Direção e Assessoramento Superior (DAS),
+por raça (1999-2024)
+</td>
+<td style="text-align:right;">
+153
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Funcionalismo público por cor/raça
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+Total de vínculos por cor e nível federativo (2004-2021)
+</td>
+<td style="text-align:right;">
+231
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Funcionalismo público por cor/raça
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+Total de vínculos por cor e poder (2004-2021)
+</td>
+<td style="text-align:right;">
+232
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Funcionalismo público por cor/raça
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+Total de vínculos públicos por cor e sexo (2004-2021)
+</td>
+<td style="text-align:right;">
+241
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Funcionalismo público por cor/raça
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+Total e proporção de vínculos de trabalho no setor público por cor, nas
+regiões e nos estados (2004 - 2021)
+</td>
+<td style="text-align:right;">
+199
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Funcionalismo público por cor/raça
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+Vínculos civis ativos do Executivo federal em 2024, por cor ou raça,
+sexo e ano de ingresso no serviço público
+</td>
+<td style="text-align:right;">
+147
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Funcionalismo público por cor/raça
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+Vínculos civis ativos do Executivo federal, por cor ou raça e natureza
+jurídica do órgão (1999-2024)
+</td>
+<td style="text-align:right;">
+150
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Funcionalismo público por cor/raça
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+Vínculos civis ativos do Executivo federal, por cor ou raça, sexo e
+carreiras selecionadas (2024)
+</td>
+<td style="text-align:right;">
+148
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Funcionalismo público por cor/raça
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+Vínculos civis ativos do Executivo federal, por cor ou raça, sexo e
+escolaridade do do cargo (2000, 2010, 2020 e 2024)
+</td>
+<td style="text-align:right;">
+149
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Funcionalismo público por cor/raça
+</td>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+Vínculos civis ativos do Executivo federal, por cor ou raça, sexo e
+órgão superior (2024)
+</td>
+<td style="text-align:right;">
+151
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Desigualdades no setor público
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:left;">
+CAP 02 Brasil: Participação relativa do emprego público municipal do SUS
+por grupo de municípios, segundo o tamanho da população, em anos
+escolhidos
+</td>
+<td style="text-align:right;">
+210
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Desigualdades no setor público
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:left;">
+CAP 10 Índice de Gini
+</td>
+<td style="text-align:right;">
+275
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Desigualdades no setor público
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:left;">
+CAP 10 Proporção da massa salarial apropriada pelos 10% de trabalhadores
+com maiores e os 10% com menores remunerações
+</td>
+<td style="text-align:right;">
+276
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Desigualdades no setor público
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:left;">
+CAP 10 Proporção de trabalhadoras do setor público entre as 10% maiores
+e 10% menores remunerações
+</td>
+<td style="text-align:right;">
+277
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Desigualdades no setor público
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:left;">
+CAP 10 Proporção de trabalhadoras e trabalhadores negros entre as 10%
+maiores e 10% menores remunerações
+</td>
+<td style="text-align:right;">
+278
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Desigualdades no setor público
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:left;">
+CAP 10 Proporção de trabalhadores por poder entre os 10% com maiores e
+os 10% com menores remunerações
+</td>
+<td style="text-align:right;">
+279
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Desigualdades no setor público
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:left;">
+CAP 10 Razão das remunerações médias
+</td>
+<td style="text-align:right;">
+274
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Desigualdades no setor público
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:left;">
+DAS 5 e 6 do Executivo federal, por cor ou raça, sexo e órgão superior
+(2000, 2005, 2015, 2020)
+</td>
+<td style="text-align:right;">
+159
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Desigualdades no setor público
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:left;">
+Decis, quartis e mediana das remunerações públicas, por nível federativo
+e poder (1985 - 2022)
+</td>
+<td style="text-align:right;">
+175
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Desigualdades no setor público
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:left;">
+Desigualdade de Remunerações no Setor Público Brasileiro (1985-2021)
+</td>
+<td style="text-align:right;">
+258
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Desigualdades no setor público
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:left;">
+Proporção de homens e mulheres em cargos DAS 5 e 6, por Ministérios
+</td>
+<td style="text-align:right;">
+132
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Desigualdades no setor público
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:left;">
+Remuneração líquida média mensal no Executivo civil federal ativo, por
+raça e escolaridade (1999-2020)
+</td>
+<td style="text-align:right;">
+144
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Desigualdades no setor público
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:left;">
+Remuneração líquida média mensal no Executivo civil federal ativo, por
+sexo e raça (1999-2020)
+</td>
+<td style="text-align:right;">
+145
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Desigualdades no setor público
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:left;">
+Remuneração média mensal no setor público, nos Poderes e nos níveis
+federativos, por sexo (1985-2021)
+</td>
+<td style="text-align:right;">
+94
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Desigualdades no setor público
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:left;">
+Total de vínculos em funções de Direção e Assessoramento Superior (DAS),
+por raça (1999-2024)
+</td>
+<td style="text-align:right;">
+153
+</td>
+</tr>
+</tbody>
+</table>
 <p>Looking at the series list, the two we wish to obtain data for at
 this moment are “<em>Remuneração média mensal de vínculos públicos por
 sexo e cor (2004-2021)</em>” and “<em>Total de vínculos públicos por cor
@@ -90,7 +779,108 @@ e sexo (2004-2021)</em>”. To retrieve the data, we will use the
 <p>And now the data frame is available:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">downloaded_series</span><span class="op">$</span><span class="va">`240`</span><span class="op">)</span></span></code></pre></div>
-  </main>
+<table class="table">
+<thead><tr>
+<th style="text-align:right;">
+ano
+</th>
+<th style="text-align:left;">
+nome_sexo
+</th>
+<th style="text-align:left;">
+nome_cor
+</th>
+<th style="text-align:left;">
+remuneracao_media
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+2004
+</td>
+<td style="text-align:left;">
+Homem
+</td>
+<td style="text-align:left;">
+Preta
+</td>
+<td style="text-align:left;">
+33.914.253
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2004
+</td>
+<td style="text-align:left;">
+Mulher
+</td>
+<td style="text-align:left;">
+Indígena
+</td>
+<td style="text-align:left;">
+31.982.719
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2004
+</td>
+<td style="text-align:left;">
+Homem
+</td>
+<td style="text-align:left;">
+Indígena
+</td>
+<td style="text-align:left;">
+4.138.483
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2004
+</td>
+<td style="text-align:left;">
+Mulher
+</td>
+<td style="text-align:left;">
+Amarela
+</td>
+<td style="text-align:left;">
+3.607.482
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2004
+</td>
+<td style="text-align:left;">
+Homem
+</td>
+<td style="text-align:left;">
+Parda
+</td>
+<td style="text-align:left;">
+36.340.293
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2004
+</td>
+<td style="text-align:left;">
+Mulher
+</td>
+<td style="text-align:left;">
+Branca
+</td>
+<td style="text-align:left;">
+32.386.196
+</td>
+</tr>
+</tbody>
+</table></main>
 </div>
 
 

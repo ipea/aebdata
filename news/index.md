@@ -1,5 +1,7 @@
 # Changelog
 
+## aebdata 0.1.7
+
 ## aebdata 0.1.6
 
 CRAN release: 2026-05-27
