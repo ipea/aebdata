@@ -26,7 +26,7 @@ using the word multiple times in the search, thus giving it greater
 importance.
 }
 \examples{
-\dontshow{if (aebdata:::test_connection_aeb() & requireNamespace("stringi", quietly = TRUE)) withAutoprint(\{ # examplesIf}
+\dontshow{if (interactive() && curl::has_internet() && requireNamespace("stringi", quietly = TRUE)) withAutoprint(\{ # examplesIf}
 \donttest{
 search_result <- search_series("regime de contratação")
 search_result$series_title

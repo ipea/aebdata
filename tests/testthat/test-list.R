@@ -17,3 +17,15 @@ test_that("wrong parameters", {
   expect_warning(list_series(theme_id = c(1, 50)))
   expect_warning(list_series(theme_id = 50, theme_title = "Test"))
 })
+
+test_that("list_themes fails clearly when themes endpoint is unavailable", {
+  local_mocked_bindings(
+    test_connection_aeb = function(api = "series") FALSE,
+    .package = "aebdata"
+  )
+
+  expect_error(
+    list_themes(),
+    "Could not connect. Please, check your connection or try again later."
+  )
+})

@@ -39,3 +39,15 @@ test_that("get_csv works", {
   expect_equal(get_series_csv(215), rds$one)
   expect_equal(get_series_csv(197), rds$multiple)
 })
+
+test_that("get_series fails clearly when series endpoint is unavailable", {
+  local_mocked_bindings(
+    test_connection_aeb = function(api = "series") FALSE,
+    .package = "aebdata"
+  )
+
+  expect_error(
+    get_series(series_id = 215),
+    "Could not connect. Please, check your connection or try again later."
+  )
+})

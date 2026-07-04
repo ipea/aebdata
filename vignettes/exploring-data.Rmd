@@ -25,7 +25,7 @@ Now, let us assume that you desire to explore some of the series that are curren
 ```{r list-themes, eval = FALSE}
 list_themes()
 ```
-```{r list-themes-knit, echo = FALSE}
+```{r list-themes-knit, echo = FALSE, eval = aebdata:::test_connection_aeb("temas")}
 list_themes() |>
   knitr::kable(format = "html")
 ```
@@ -35,14 +35,14 @@ The two themes to be explored here will be "_Funcionalismo público por cor/raç
 ```{r list-series, eval = FALSE}
 list_series(theme_id = c(41,49))
 ```
-```{r list-series-knit, echo = FALSE}
+```{r list-series-knit, echo = FALSE, eval = aebdata:::test_connection_aeb("temas") && aebdata:::test_connection_aeb()}
 list_series(theme_id = c(41,49)) |>
   knitr::kable(format = "html")
 ```
 
 Looking at the series list, the two we wish to obtain data for at this moment are "_Remuneração média mensal de vínculos públicos por sexo e cor (2004-2021)_" and "_Total de vínculos públicos por cor e sexo (2004-2021)_". To retrieve the data, we will use the `get_series()` function with the desired ids.
 
-```{r get-series}
+```{r get-series, eval = aebdata:::test_connection_aeb()}
 downloaded_series <- get_series(series_id = c(240, 241))
 ```
 
@@ -51,7 +51,7 @@ And now the data frame is available:
 ```{r download-141, eval = FALSE}
 head(downloaded_series$`240`)
 ```
-```{r download-141-knit, echo = FALSE}
+```{r download-141-knit, echo = FALSE, eval = exists("downloaded_series")}
 head(downloaded_series$`240`) |>
   knitr::kable(format = "html")
 ```

@@ -7,11 +7,16 @@
 #' @noRd
 
 test_connection_aeb <- function(api = "series") {
+  old_timeout <- getOption("timeout")
+  new_timeout <- max(old_timeout, 60)
+  options(timeout = new_timeout)
+  on.exit(options(timeout = old_timeout), add = TRUE)
 
   # Returns the status code of the connection to the API
   vc_status <- "https://www.ipea.gov.br/atlasestado/api/v1/" |>
     httr2::request() |>
     httr2::req_url_path_append(api) |>
+    httr2::req_timeout(new_timeout) |>
     httr2::req_perform() |>
     httr2::resp_status() |>
     tryCatch(error = function(cnd) NULL)

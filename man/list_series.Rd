@@ -18,7 +18,7 @@ List all series from the Atlas, regardless of whether they have data
 available for download or not.
 }
 \examples{
-\dontshow{if (aebdata:::test_connection_aeb("temas")) withAutoprint(\{ # examplesIf}
+\dontshow{if (interactive() && curl::has_internet()) withAutoprint(\{ # examplesIf}
 series <- list_series(theme_id = c(42, 50))
 series$series_title
 \donttest{

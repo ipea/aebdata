@@ -26,6 +26,10 @@
 #' }
 
 get_series <- function(series_id = NULL, series_title = NULL) {
+  old_timeout <- getOption("timeout")
+  new_timeout <- max(old_timeout, 60)
+  options(timeout = new_timeout)
+  on.exit(options(timeout = old_timeout), add = TRUE)
 
   # Check if both series_id and serie_title are empty
   if (is.null(series_id) & is.null(series_title)) {
@@ -36,23 +40,22 @@ get_series <- function(series_id = NULL, series_title = NULL) {
 
     # Check connection
     if(!test_connection_aeb()) {
-
-      cli::cli_alert_danger(
+      cli::cli_abort(
         "Could not connect. Please, check your connection or try again later."
       )
+    }
 
-    } else {
+    # List all series
+    df_series <- "https://www.ipea.gov.br/atlasestado/api/v1/series" |>
+      httr2::request() |>
+      httr2::req_timeout(new_timeout) |>
+      httr2::req_perform() |>
+      httr2::resp_body_json() |>
+      # Select only the title and id to avoid problems with subthemes
+      lapply(`[`, c("titulo", "id")) |>
+      do.call(rbind.data.frame, args = _)
 
-      # List all series
-      df_series <- "https://www.ipea.gov.br/atlasestado/api/v1/series" |>
-        httr2::request() |>
-        httr2::req_perform() |>
-        httr2::resp_body_json() |>
-        # Select only the title and id to avoid problems with subthemes
-        lapply(`[`, c("titulo", "id")) |>
-        do.call(rbind.data.frame, args = _)
-
-      names(df_series) <- c("series_title", "series_id")
+    names(df_series) <- c("series_title", "series_id")
 
       # Check if at least one theme_id or theme_title is correct
       if (length(c(intersect(series_id, df_series$series_id),
@@ -169,27 +172,21 @@ get_series <- function(series_id = NULL, series_title = NULL) {
 
     }
 
-  }
-
 }
 
-#' Get series data.frames
-#'
-#' @param series_id The series id to download
-#'
-#' @return a data.frame or a list
-#'
-#' @examplesIf interactive() && curl::has_internet()
-#' get_series_csv(231)
-#'
-#' @noRd
-
 get_series_csv <- function(series_id) {
+  old_timeout <- getOption("timeout")
+  new_timeout <- max(old_timeout, 60)
+  options(timeout = new_timeout)
+  on.exit(options(timeout = old_timeout), add = TRUE)
 
   # List all csv files of a specific series
   vc_downloads <- "https://www.ipea.gov.br/atlasestado/consulta/" |>
     paste0(series_id) |>
-    rvest::read_html() |>
+    httr2::request() |>
+    httr2::req_timeout(new_timeout) |>
+    httr2::req_perform() |>
+    httr2::resp_body_html() |>
     rvest::html_element(".modal-body") |>
     rvest::html_elements("a") |>
     rvest::html_attr("href") |>
@@ -200,24 +197,27 @@ get_series_csv <- function(series_id) {
     return(NULL)
   }
 
+  # Helper function to download CSV raw data and parse it
+  download_and_parse_csv <- function(path) {
+    req <- paste0("https://www.ipea.gov.br/atlasestado/", path) |>
+      httr2::request() |>
+      httr2::req_timeout(new_timeout)
+    resp <- httr2::req_perform(req)
+    readr::read_delim(httr2::resp_body_raw(resp), delim = ";", show_col_types = FALSE) |>
+      as.data.frame()
+  }
+
   # Download if it is not an empty vector
   if (length(vc_downloads) == 1) {
 
     # Read the file as a data.frame
-    df_series <- vc_downloads |>
-      (\(x) paste0("https://www.ipea.gov.br/atlasestado/", x))() |>
-      readr::read_delim(delim = ";", show_col_types = FALSE) |>
-      as.data.frame()
+    df_series <- download_and_parse_csv(vc_downloads)
 
   } else {
 
     # Read all files as data.frames
     df_series <- vc_downloads |>
-      (\(x) paste0("https://www.ipea.gov.br/atlasestado/", x))() |>
-      lapply(function(link) readr::read_delim(link,
-                                              delim = ";",
-                                              show_col_types = FALSE)) |>
-      lapply(as.data.frame)
+      lapply(download_and_parse_csv)
 
     # Assign names to each element based on the file name
     names(df_series) <- basename(vc_downloads) |>

@@ -13,6 +13,7 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 Depends: R (>= 4.2.0)
 Suggests: 
+    curl,
     knitr,
     rmarkdown,
     stringi,

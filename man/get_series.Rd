@@ -24,7 +24,7 @@ than one series, the return will be a list of data.frames, with each
 data.frame corresponding to a series.
 }
 \examples{
-\dontshow{if (aebdata:::test_connection_aeb()) withAutoprint(\{ # examplesIf}
+\dontshow{if (interactive() && curl::has_internet()) withAutoprint(\{ # examplesIf}
 # Get the series 230 and print the head
 serie_230 <- get_series(series_id = 230)
 head(serie_230)

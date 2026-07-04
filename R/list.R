@@ -12,32 +12,33 @@
 #' themes$theme_title
 
 list_themes <- function() {
+  old_timeout <- getOption("timeout")
+  new_timeout <- max(old_timeout, 60)
+  options(timeout = new_timeout)
+  on.exit(options(timeout = old_timeout), add = TRUE)
 
   # Check connection
-  if(!test_connection_aeb()) {
-
-    cli::cli_alert_danger(
+  if(!test_connection_aeb("temas")) {
+    cli::cli_abort(
       "Could not connect. Please, check your connection or try again later."
     )
-
-  } else {
-
-    # Get the themes from API
-    df_themes <- "https://www.ipea.gov.br/atlasestado/api/v1/temas" |>
-      httr2::request() |>
-      httr2::req_perform() |>
-      httr2::resp_body_json() |>
-      # Select only the title and id to avoid problems with subthemes
-      lapply(`[`, c("titulo", "id")) |>
-      do.call(rbind.data.frame, args = _)
-
-    # Change the column names to more specific names
-    names(df_themes) <- c("theme_title", "theme_id")
-
-    # Return the object
-    return(df_themes)
-
   }
+
+  # Get the themes from API
+  df_themes <- "https://www.ipea.gov.br/atlasestado/api/v1/temas" |>
+    httr2::request() |>
+    httr2::req_timeout(new_timeout) |>
+    httr2::req_perform() |>
+    httr2::resp_body_json() |>
+    # Select only the title and id to avoid problems with subthemes
+    lapply(`[`, c("titulo", "id")) |>
+    do.call(rbind.data.frame, args = _)
+
+  # Change the column names to more specific names
+  names(df_themes) <- c("theme_title", "theme_id")
+
+  # Return the object
+  return(df_themes)
 
 }
 
@@ -138,9 +139,15 @@ list_series <- function(theme_id = NULL, theme_title = NULL) {
 #' @noRd
 
 list_series_id <- function(theme_id) {
+  old_timeout <- getOption("timeout")
+  new_timeout <- max(old_timeout, 60)
+  options(timeout = new_timeout)
+  on.exit(options(timeout = old_timeout), add = TRUE)
+
   df_series <- "https://www.ipea.gov.br/atlasestado/api/v1/series/" |>
     paste0(theme_id) |>
     httr2::request() |>
+    httr2::req_timeout(new_timeout) |>
     httr2::req_perform() |>
     httr2::resp_body_json() |>
     lapply(`[`, c("titulo", "id")) |>
